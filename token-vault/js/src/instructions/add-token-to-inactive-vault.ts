@@ -6,7 +6,7 @@ import {
   Signer,
   SystemProgram,
   TransactionInstruction,
-} from '@solana/web3.js';
+} from '@safecoin/web3.js';
 import { VAULT_PREFIX, VAULT_PROGRAM_ID } from '../common/consts';
 import {
   mintTokens,

@@ -18,7 +18,7 @@ use mpl_token_metadata::{
     state::{Metadata, EDITION},
 };
 use mpl_token_vault::{instruction::create_withdraw_tokens_instruction, state::Vault};
-use solana_program::{
+use safecoin_program::{
     account_info::AccountInfo,
     borsh::try_from_slice_unchecked,
     entrypoint::ProgramResult,
@@ -211,7 +211,7 @@ pub fn assert_auction_is_ended_or_valid_instant_sale(
 }
 
 /// Create account almost from scratch, lifted from
-/// https://github.com/solana-labs/solana-program-library/blob/7d4873c61721aca25464d42cc5ef651a7923ca79/associated-token-account/program/src/processor.rs#L51-L98
+/// https://github.com/solana-labs/safecoin-program-library/blob/7d4873c61721aca25464d42cc5ef651a7923ca79/associated-token-account/program/src/processor.rs#L51-L98
 #[inline(always)]
 pub fn create_or_allocate_account_raw<'a>(
     program_id: Pubkey,

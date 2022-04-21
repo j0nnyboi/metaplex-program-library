@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 thiserror = "1.0.30"
 clap = { version = "3.0.5", features = [ "derive" ] }
-solana-sdk = "1.9.5"
+safecoin-sdk = "1.9.5"
 solana-client = "1.9.5"
 mpl-fixed-price-sale = { path = "../program", features = [ "no-entrypoint" ] }
 mpl-token-metadata = { features = [ "no-entrypoint" ], version="~1.1.0" }

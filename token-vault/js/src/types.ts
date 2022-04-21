@@ -1,5 +1,5 @@
-import { Keypair, PublicKey, Signer, TransactionInstruction } from '@solana/web3.js';
-import { bignum as beetBignum } from '@metaplex-foundation/beet';
+import { Keypair, PublicKey, Signer, TransactionInstruction } from '@safecoin/web3.js';
+import { bignum as beetBignum } from '@j0nnyboi/beet';
 
 export type InstructionsWithAccounts<T extends Record<string, PublicKey | Keypair>> = [
   TransactionInstruction[],

@@ -4,7 +4,7 @@ use {
         state::{Key, Vault},
     },
     borsh::BorshDeserialize,
-    solana_program::{
+    safecoin_program::{
         account_info::AccountInfo,
         borsh::try_from_slice_unchecked,
         entrypoint::ProgramResult,
@@ -77,7 +77,7 @@ pub fn assert_token_program_matches_package(token_program_info: &AccountInfo) ->
 }
 
 /// Create account almost from scratch, lifted from
-/// https://github.com/solana-labs/solana-program-library/blob/7d4873c61721aca25464d42cc5ef651a7923ca79/associated-token-account/program/src/processor.rs#L51-L98
+/// https://github.com/solana-labs/safecoin-program-library/blob/7d4873c61721aca25464d42cc5ef651a7923ca79/associated-token-account/program/src/processor.rs#L51-L98
 #[inline(always)]
 pub fn create_or_allocate_account_raw<'a>(
     program_id: Pubkey,

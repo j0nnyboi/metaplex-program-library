@@ -1,7 +1,7 @@
 use crate::{AuctionHouse, ErrorCode, PREFIX};
 use anchor_lang::{
     prelude::*,
-    solana_program::{
+    safecoin_program::{
         program::invoke_signed,
         program_memory::sol_memcmp,
         program_option::COption,
@@ -434,7 +434,7 @@ pub fn get_delegate_from_token_account(token_account_info: &AccountInfo) -> Resu
 }
 
 /// Create account almost from scratch, lifted from
-/// <https://github.com/solana-labs/solana-program-library/blob/7d4873c61721aca25464d42cc5ef651a7923ca79/associated-token-account/program/src/processor.rs#L51-L98>
+/// <https://github.com/solana-labs/safecoin-program-library/blob/7d4873c61721aca25464d42cc5ef651a7923ca79/associated-token-account/program/src/processor.rs#L51-L98>
 #[inline(always)]
 pub fn create_or_allocate_account_raw<'a>(
     program_id: Pubkey,
