@@ -4,8 +4,8 @@ use mpl_nft_packs::{
     instruction::InitPackSetArgs,
     state::{AccountType, PackDistributionType},
 };
-use solana_program::{instruction::InstructionError, system_instruction};
-use solana_program_test::*;
+use safecoin_program::{instruction::InstructionError, system_instruction};
+use safecoin_program_test::*;
 use solana_sdk::{
     signature::Keypair,
     signer::Signer,
@@ -103,7 +103,7 @@ async fn success() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -152,7 +152,7 @@ async fn fail_invalid_index() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],

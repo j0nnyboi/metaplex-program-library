@@ -11,7 +11,7 @@
 //! are not winning bids from the state.
 
 use borsh::try_to_vec_with_schema;
-use solana_program::system_program;
+use safecoin_program::system_program;
 
 use crate::{
     errors::AuctionError,
@@ -30,7 +30,7 @@ use super::BIDDER_METADATA_LEN;
 
 use {
     borsh::{BorshDeserialize, BorshSerialize},
-    solana_program::{
+    safecoin_program::{
         account_info::{next_account_info, AccountInfo},
         entrypoint::ProgramResult,
         msg,

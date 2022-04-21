@@ -18,7 +18,7 @@ use {
         input_validators::{is_url, is_valid_pubkey, is_valid_signer},
     },
     solana_client::rpc_client::RpcClient,
-    solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack},
+    safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack},
     solana_sdk::{
         pubkey::Pubkey,
         signature::{read_keypair_file, Keypair, Signer},

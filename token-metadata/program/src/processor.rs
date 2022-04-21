@@ -11,7 +11,7 @@ use crate::{
     },
     error::MetadataError,
     instruction::MetadataInstruction,
-    solana_program::program_memory::sol_memset,
+    safecoin_program::program_memory::sol_memset,
     state::{
         Collection, CollectionAuthorityRecord, DataV2, Key, MasterEditionV1, MasterEditionV2,
         Metadata, TokenStandard, UseAuthorityRecord, UseMethod, Uses, BURN, COLLECTION_AUTHORITY,
@@ -33,7 +33,7 @@ use crate::{
 use arrayref::array_ref;
 use borsh::{BorshDeserialize, BorshSerialize};
 use mpl_token_vault::{error::VaultError, state::VaultState};
-use solana_program::{
+use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     msg,

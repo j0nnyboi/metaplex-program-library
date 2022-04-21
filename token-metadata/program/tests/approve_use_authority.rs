@@ -6,7 +6,7 @@ use mpl_token_metadata::state::{UseAuthorityRecord, UseMethod, Uses};
 use mpl_token_metadata::error::MetadataError;
 use mpl_token_metadata::pda::find_use_authority_account;
 use num_traits::FromPrimitive;
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -17,7 +17,7 @@ use utils::*;
 mod approve_use_authority {
 
     use mpl_token_metadata::{pda::find_program_as_burner_account, state::Key};
-    use solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
+    use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
     use spl_token::state::Account;
 
     use super::*;

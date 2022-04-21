@@ -5,8 +5,8 @@ use mpl_auction::{
         PlaceBidArgs, PriceFloor, StartAuctionArgs, WinnerLimit,
     },
 };
-use solana_program::{hash::Hash, program_pack::Pack, pubkey::Pubkey, system_instruction};
-use solana_program_test::*;
+use safecoin_program::{hash::Hash, program_pack::Pack, pubkey::Pubkey, system_instruction};
+use safecoin_program_test::*;
 use solana_sdk::{
     account::Account,
     signature::{Keypair, Signer},

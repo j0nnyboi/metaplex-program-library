@@ -3,7 +3,7 @@ mod utils;
 
 use mpl_token_metadata::state::{UseMethod, Uses};
 use num_traits::FromPrimitive;
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     instruction::InstructionError, signature::Signer, transaction::Transaction,
     transaction::TransactionError, transport::TransportError,
@@ -17,7 +17,7 @@ mod uses {
         pda::{find_program_as_burner_account, find_use_authority_account},
         state::{Key, UseAuthorityRecord},
     };
-    use solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
+    use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
     use solana_sdk::signature::Keypair;
     use spl_token::state::Account;
 

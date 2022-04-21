@@ -3,14 +3,14 @@ pub mod utils;
 
 use anchor_lang::{prelude::*, AccountDeserialize, InstructionData, ToAccountMetas};
 use mpl_testing_utils::{solana::airdrop, utils::Metadata};
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::signer::Signer;
 
 use std::assert_eq;
 
-use solana_program::{instruction::Instruction, system_program, sysvar};
+use safecoin_program::{instruction::Instruction, system_program, sysvar};
 
-use solana_program::program_pack::Pack;
+use safecoin_program::program_pack::Pack;
 
 use mpl_auction_house::{
     pda::{find_escrow_payment_address, find_program_as_signer_address, find_trade_state_address},

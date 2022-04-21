@@ -13,7 +13,7 @@ use crate::{
     },
 };
 use borsh::{BorshDeserialize, BorshSerialize};
-use solana_program::{
+use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     msg,
@@ -968,20 +968,20 @@ pub fn process_init_vault(
     let (authority, _) = Pubkey::find_program_address(seeds, program_id);
 
     match fraction_mint.mint_authority {
-        solana_program::program_option::COption::None => {
+        safecoin_program::program_option::COption::None => {
             return Err(VaultError::VaultAuthorityNotProgram.into());
         }
-        solana_program::program_option::COption::Some(val) => {
+        safecoin_program::program_option::COption::Some(val) => {
             if val != authority {
                 return Err(VaultError::VaultAuthorityNotProgram.into());
             }
         }
     }
     match fraction_mint.freeze_authority {
-        solana_program::program_option::COption::None => {
+        safecoin_program::program_option::COption::None => {
             return Err(VaultError::VaultAuthorityNotProgram.into());
         }
-        solana_program::program_option::COption::Some(val) => {
+        safecoin_program::program_option::COption::Some(val) => {
             if val != authority {
                 return Err(VaultError::VaultAuthorityNotProgram.into());
             }

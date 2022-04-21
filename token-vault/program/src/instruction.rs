@@ -1,7 +1,7 @@
 use crate::state::{ExternalPriceAccount, Key};
 use borsh::{BorshDeserialize, BorshSerialize};
 use shank::ShankInstruction;
-use solana_program::{
+use safecoin_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     sysvar,
@@ -272,7 +272,7 @@ pub fn create_add_token_to_inactive_vault_instruction(
             AccountMeta::new_readonly(transfer_authority, true),
             AccountMeta::new_readonly(spl_token::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         ],
         data: VaultInstruction::AddTokenToInactiveVault(AmountArgs { amount })
             .try_to_vec()

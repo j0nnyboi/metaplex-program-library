@@ -3,7 +3,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Token, TokenAccount};
 use mpl_token_metadata;
-use solana_program::{
+use safecoin_program::{
     instruction::{AccountMeta, Instruction},
     program::{invoke, invoke_signed},
     system_instruction, sysvar,
@@ -234,7 +234,7 @@ pub mod merkle_distributor {
         let mint = ctx.accounts.from.mint;
 
         // Verify the merkle proof.
-        let node = solana_program::keccak::hashv(&[
+        let node = safecoin_program::keccak::hashv(&[
             &[0x00],
             &index.to_le_bytes(),
             &claimant_secret.to_bytes(),
@@ -312,7 +312,7 @@ pub mod merkle_distributor {
         // TODO: this is a bit weird but we verify elsewhere that the candy_machine_config is
         // actually a config thing and not a mint
         // Verify the merkle proof.
-        let node = solana_program::keccak::hashv(&[
+        let node = safecoin_program::keccak::hashv(&[
             &[0x00],
             &index.to_le_bytes(),
             &claimant_secret.to_bytes(),
@@ -440,7 +440,7 @@ pub mod merkle_distributor {
         require!(*claim_count.to_account_info().owner == ID, OwnerMismatch);
 
         // TODO: master_edition or something else? should we has the edition here also?
-        let node = solana_program::keccak::hashv(&[
+        let node = safecoin_program::keccak::hashv(&[
             &[0x00],
             &index.to_le_bytes(),
             &claimant_secret.to_bytes(),

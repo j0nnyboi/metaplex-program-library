@@ -4,7 +4,7 @@ use crate::{
 };
 use borsh::{BorshDeserialize, BorshSerialize};
 use shank::ShankInstruction;
-use solana_program::{
+use safecoin_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     sysvar,
@@ -428,7 +428,7 @@ pub fn create_metadata_accounts(
             AccountMeta::new_readonly(mint_authority, true),
             AccountMeta::new(payer, true),
             AccountMeta::new_readonly(update_authority, update_authority_is_signer),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetadataInstruction::CreateMetadataAccount(CreateMetadataAccountArgs {
@@ -473,7 +473,7 @@ pub fn create_metadata_accounts_v2(
             AccountMeta::new_readonly(mint_authority, true),
             AccountMeta::new(payer, true),
             AccountMeta::new_readonly(update_authority, update_authority_is_signer),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetadataInstruction::CreateMetadataAccountV2(CreateMetadataAccountArgsV2 {
@@ -597,7 +597,7 @@ pub fn create_master_edition(
         AccountMeta::new(payer, true),
         AccountMeta::new_readonly(metadata, false),
         AccountMeta::new_readonly(spl_token::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
 
@@ -630,7 +630,7 @@ pub fn create_master_edition_v3(
         AccountMeta::new(payer, true),
         AccountMeta::new(metadata, false),
         AccountMeta::new_readonly(spl_token::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
 
@@ -686,7 +686,7 @@ pub fn mint_new_edition_from_master_edition_via_token(
         AccountMeta::new_readonly(new_metadata_update_authority, false),
         AccountMeta::new_readonly(metadata, false),
         AccountMeta::new_readonly(spl_token::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
 
@@ -791,7 +791,7 @@ pub fn mint_edition_from_master_edition_via_vault_proxy(
         AccountMeta::new_readonly(metadata, false),
         AccountMeta::new_readonly(token_program, false),
         AccountMeta::new_readonly(token_vault_program_info, false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
 
@@ -934,7 +934,7 @@ pub fn utilize(
         AccountMeta::new_readonly(owner, false),
         AccountMeta::new_readonly(spl_token::id(), false),
         AccountMeta::new_readonly(spl_associated_token_account::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
     if use_authority_record_pda.is_some() {
@@ -999,7 +999,7 @@ pub fn approve_use_authority(
             AccountMeta::new_readonly(mint, false),
             AccountMeta::new_readonly(burner, false),
             AccountMeta::new_readonly(spl_token::id(), false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetadataInstruction::ApproveUseAuthority(ApproveUseAuthorityArgs { number_of_uses })
@@ -1044,7 +1044,7 @@ pub fn revoke_use_authority(
             AccountMeta::new_readonly(mint, false),
             AccountMeta::new_readonly(metadata, false),
             AccountMeta::new_readonly(spl_token::id(), false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetadataInstruction::RevokeUseAuthority
@@ -1086,7 +1086,7 @@ pub fn approve_collection_authority(
             AccountMeta::new(payer, true),
             AccountMeta::new_readonly(metadata, false),
             AccountMeta::new_readonly(mint, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetadataInstruction::ApproveCollectionAuthority

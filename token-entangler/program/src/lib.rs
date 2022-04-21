@@ -3,7 +3,7 @@ pub mod utils;
 use crate::utils::*;
 use anchor_lang::{
     prelude::*,
-    solana_program::program::{invoke, invoke_signed},
+    safecoin_program::program::{invoke, invoke_signed},
     AnchorDeserialize, AnchorSerialize,
 };
 use anchor_spl::{

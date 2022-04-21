@@ -10,7 +10,7 @@ use mpl_token_metadata::{
     utils::puffed_out_string,
 };
 use num_traits::FromPrimitive;
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -21,7 +21,7 @@ use utils::*;
 mod verify_collection {
 
     use mpl_token_metadata::state::{COLLECTION_AUTHORITY_RECORD_SIZE, CollectionAuthorityRecord};
-    use solana_program::borsh::try_from_slice_unchecked;
+    use safecoin_program::borsh::try_from_slice_unchecked;
     use solana_sdk::transaction::Transaction;
 
     use super::*;

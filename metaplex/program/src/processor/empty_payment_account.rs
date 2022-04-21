@@ -1,4 +1,4 @@
-use solana_program::msg;
+use safecoin_program::msg;
 
 use crate::{
     error::MetaplexError,
@@ -16,7 +16,7 @@ use borsh::BorshSerialize;
 use mpl_auction::processor::AuctionData;
 use mpl_token_metadata::state::{MasterEditionV1, Metadata};
 use mpl_token_vault::state::SafetyDepositBox;
-use solana_program::{
+use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program_error::ProgramError,
@@ -275,7 +275,7 @@ pub fn process_empty_payment_account(
     assert_owned_by(destination_info, token_program_info.key)?;
     assert_owned_by(accept_payment_info, token_program_info.key)?;
     assert_owned_by(metadata_info, &store.token_metadata_program)?;
-    if *master_edition_info.key != solana_program::system_program::id() {
+    if *master_edition_info.key != safecoin_program::system_program::id() {
         assert_owned_by(master_edition_info, &store.token_metadata_program)?;
     }
     assert_owned_by(safety_deposit_info, &store.token_vault_program)?;

@@ -1,4 +1,4 @@
-use solana_program::{account_info::AccountInfo, program_error::ProgramError, pubkey::Pubkey};
+use safecoin_program::{account_info::AccountInfo, program_error::ProgramError, pubkey::Pubkey};
 
 use crate::{error::MetadataError, pda, state::{UseAuthorityRecord, UseMethod, Uses, PREFIX, USER}, utils::assert_derivation};
 

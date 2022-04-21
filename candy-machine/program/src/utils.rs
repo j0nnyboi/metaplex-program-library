@@ -4,7 +4,7 @@ use {
     crate::{CandyMachine, ErrorCode},
     anchor_lang::{
         prelude::{Account, AccountInfo, Clock, ProgramError, ProgramResult, Pubkey},
-        solana_program::{
+        safecoin_program::{
             program::invoke_signed,
             program_pack::{IsInitialized, Pack},
         },

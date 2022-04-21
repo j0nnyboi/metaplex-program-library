@@ -10,7 +10,7 @@ pub mod utils;
 use crate::{bid::*, constants::*, receipt::*, utils::*};
 use anchor_lang::{
     prelude::*,
-    solana_program::{
+    safecoin_program::{
         program::{invoke, invoke_signed},
         system_instruction,
     },
@@ -20,7 +20,7 @@ use anchor_spl::{
     associated_token::AssociatedToken,
     token::{Mint, Token, TokenAccount},
 };
-use solana_program::program_memory::sol_memset;
+use safecoin_program::program_memory::sol_memset;
 use spl_token::instruction::{approve, revoke};
 anchor_lang::declare_id!("hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk");
 

@@ -1,4 +1,4 @@
-use solana_program_test::ProgramTestContext;
+use safecoin_program_test::ProgramTestContext;
 use solana_sdk::pubkey::Pubkey;
 use solana_sdk::signature::Keypair;
 use solana_sdk::signer::Signer;

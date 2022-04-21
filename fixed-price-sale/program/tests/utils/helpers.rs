@@ -5,8 +5,8 @@ use anchor_client::solana_sdk::{
     signer::{keypair::Keypair, Signer},
 };
 use mpl_token_metadata::state::Collection;
-use solana_program::{clock::Clock, system_instruction};
-use solana_program_test::*;
+use safecoin_program::{clock::Clock, system_instruction};
+use safecoin_program_test::*;
 use solana_sdk::{program_pack::Pack, transaction::Transaction};
 use std::convert::TryFrom;
 

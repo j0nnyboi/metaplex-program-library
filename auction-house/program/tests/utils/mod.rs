@@ -16,7 +16,7 @@ pub mod setup_functions;
 // };
 // use constants::{AUCTION_HOUSE, FEE_PAYER, SIGNER, TREASURY};
 
-// use solana_program_test::*;
+// use safecoin_program_test::*;
 
 // /// Return `spl_token` token account.
 // pub fn get_token_account(

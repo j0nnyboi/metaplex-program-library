@@ -17,7 +17,7 @@ use mpl_token_metadata::{
     state::{Edition, EDITION, PREFIX as EDITION_PREFIX},
     utils::assert_derivation,
 };
-use solana_program::{
+use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     clock::Clock,
     entrypoint::ProgramResult,

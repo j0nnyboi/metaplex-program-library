@@ -1,7 +1,7 @@
 #![cfg(feature = "test-bpf")]
 
 
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     signature::{Keypair, Signer},
 };

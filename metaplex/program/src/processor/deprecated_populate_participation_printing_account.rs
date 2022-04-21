@@ -12,7 +12,7 @@ use mpl_token_metadata::{
     deprecated_instruction::deprecated_mint_printing_tokens_via_token, state::MasterEditionV1,
 };
 use mpl_token_vault::state::SafetyDepositBox;
-use solana_program::{
+use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program::invoke_signed,

@@ -1,8 +1,8 @@
-use solana_program::program_pack::IsInitialized;
+use safecoin_program::program_pack::IsInitialized;
 
 use {
     crate::errors::AuctionError,
-    solana_program::{
+    safecoin_program::{
         account_info::AccountInfo,
         entrypoint::ProgramResult,
         msg,

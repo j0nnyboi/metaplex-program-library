@@ -4,7 +4,7 @@ use crate::{
 };
 use borsh::{BorshDeserialize, BorshSerialize};
 use mpl_token_metadata::state::EDITION_MARKER_BIT_SIZE;
-use solana_program::{
+use safecoin_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     sysvar,
@@ -709,7 +709,7 @@ pub fn create_deprecated_init_auction_manager_v1_instruction(
             AccountMeta::new_readonly(payer, true),
             AccountMeta::new_readonly(accept_payment_account_key, false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetaplexInstruction::DeprecatedInitAuctionManagerV1(settings)
@@ -743,7 +743,7 @@ pub fn create_init_auction_manager_v2_instruction(
             AccountMeta::new_readonly(payer, true),
             AccountMeta::new_readonly(accept_payment_account_key, false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
         data: MetaplexInstruction::InitAuctionManagerV2(InitAuctionManagerV2Args {
@@ -837,7 +837,7 @@ pub fn create_deprecated_validate_safety_deposit_box_v1_instruction(
         AccountMeta::new_readonly(metadata_authority, true),
         AccountMeta::new_readonly(payer, true),
         AccountMeta::new_readonly(mpl_token_metadata::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
 
@@ -902,7 +902,7 @@ pub fn create_validate_safety_deposit_box_v2_instruction(
         AccountMeta::new_readonly(metadata_authority, true),
         AccountMeta::new_readonly(payer, true),
         AccountMeta::new_readonly(mpl_token_metadata::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
 
@@ -952,7 +952,7 @@ pub fn create_redeem_bid_instruction(
             AccountMeta::new_readonly(mpl_token_vault::id(), false),
             AccountMeta::new_readonly(mpl_token_metadata::id(), false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
             AccountMeta::new_readonly(transfer_authority, false),
             AccountMeta::new_readonly(auction_extended, false),
@@ -1000,7 +1000,7 @@ pub fn create_redeem_full_rights_transfer_bid_instruction(
             AccountMeta::new_readonly(mpl_token_vault::id(), false),
             AccountMeta::new_readonly(mpl_token_metadata::id(), false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
             AccountMeta::new(master_metadata, false),
             AccountMeta::new_readonly(new_metadata_authority, false),
@@ -1053,7 +1053,7 @@ pub fn create_deprecated_redeem_participation_bid_instruction(
             AccountMeta::new_readonly(mpl_token_vault::id(), false),
             AccountMeta::new_readonly(mpl_token_metadata::id(), false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
             AccountMeta::new_readonly(transfer_authority, true),
             AccountMeta::new(accept_payment, false),
@@ -1106,7 +1106,7 @@ pub fn create_set_store_instruction(
         AccountMeta::new_readonly(mpl_token_vault::id(), false),
         AccountMeta::new_readonly(mpl_token_metadata::id(), false),
         AccountMeta::new_readonly(mpl_auction::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
     Instruction {
@@ -1137,7 +1137,7 @@ pub fn create_set_store_v2_instruction(
         AccountMeta::new_readonly(mpl_token_vault::id(), false),
         AccountMeta::new_readonly(mpl_token_metadata::id(), false),
         AccountMeta::new_readonly(mpl_auction::id(), false),
-        AccountMeta::new_readonly(solana_program::system_program::id(), false),
+        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
     Instruction {
@@ -1330,7 +1330,7 @@ pub fn create_redeem_printing_v2_bid_instruction(
             AccountMeta::new_readonly(mpl_token_vault::id(), false),
             AccountMeta::new_readonly(mpl_token_metadata::id(), false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
             AccountMeta::new(prize_tracking_ticket, false),
             AccountMeta::new(new_metadata, false),
@@ -1536,7 +1536,7 @@ pub fn create_redeem_participation_bid_v3_instruction(
             AccountMeta::new_readonly(mpl_token_vault::id(), false),
             AccountMeta::new_readonly(mpl_token_metadata::id(), false),
             AccountMeta::new_readonly(store, false),
-            AccountMeta::new_readonly(solana_program::system_program::id(), false),
+            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
             AccountMeta::new_readonly(transfer_authority, true),
             AccountMeta::new(accept_payment, false),

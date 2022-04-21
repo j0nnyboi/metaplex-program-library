@@ -1,7 +1,7 @@
 #![cfg(test)]
 
 mod puff_out_test {
-    use solana_program::pubkey::Pubkey;
+    use safecoin_program::pubkey::Pubkey;
 
     use crate::{
         state::{Data, Key, Metadata},

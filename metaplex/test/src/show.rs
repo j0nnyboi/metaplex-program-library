@@ -7,7 +7,7 @@ use {
     },
     solana_clap_utils::input_parsers::pubkey_of,
     solana_client::rpc_client::RpcClient,
-    solana_program::{borsh::try_from_slice_unchecked, pubkey::Pubkey},
+    safecoin_program::{borsh::try_from_slice_unchecked, pubkey::Pubkey},
     solana_sdk::signature::Keypair,
     metaplex_auction::processor::{AuctionData, AuctionDataExtended},
 };

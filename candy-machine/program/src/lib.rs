@@ -1,6 +1,6 @@
 pub mod utils;
 
-use solana_program::sysvar::{instructions::get_instruction_relative, SysvarId};
+use safecoin_program::sysvar::{instructions::get_instruction_relative, SysvarId};
 use {
     crate::utils::{
         assert_initialized, assert_is_ata, assert_keys_equal, assert_owned_by,
@@ -9,7 +9,7 @@ use {
     },
     anchor_lang::{
         prelude::*,
-        solana_program::{
+        safecoin_program::{
             program::{invoke, invoke_signed},
             serialize_utils::{read_pubkey, read_u16},
             system_instruction, sysvar,
@@ -417,7 +417,7 @@ pub mod candy_machine {
 
             if program_id != candy_machine::id()
                 && program_id != spl_token::id()
-                && program_id != anchor_lang::solana_program::system_program::ID
+                && program_id != anchor_lang::safecoin_program::system_program::ID
                 && program_id != associated_token
             {
                 msg!("Transaction had ix with program id {}", program_id);

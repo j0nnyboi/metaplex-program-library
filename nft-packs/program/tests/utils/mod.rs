@@ -20,8 +20,8 @@ pub use metadata::TestMetadata;
 pub use pack_card::TestPackCard;
 pub use pack_set::TestPackSet;
 pub use pack_voucher::TestPackVoucher;
-use solana_program::clock::Clock;
-use solana_program_test::*;
+use safecoin_program::clock::Clock;
+use safecoin_program_test::*;
 use solana_sdk::{
     account::Account, program_pack::Pack, pubkey::Pubkey, signature::Signer,
     signer::keypair::Keypair, system_instruction, transaction::Transaction, transport,

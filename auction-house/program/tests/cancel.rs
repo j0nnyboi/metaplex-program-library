@@ -8,7 +8,7 @@ use mpl_auction_house::{
     receipt::{BidReceipt, ListingReceipt},
 };
 use mpl_testing_utils::{solana::airdrop, utils::Metadata};
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     instruction::Instruction,
     signature::{Keypair, Signer},
@@ -85,7 +85,7 @@ async fn cancel_listing() {
 
     let accounts = mpl_auction_house::accounts::CancelListingReceipt {
         receipt: listing_receipt,
-        system_program: solana_program::system_program::id(),
+        system_program: safecoin_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);
@@ -195,7 +195,7 @@ async fn cancel_bid() {
 
     let accounts = mpl_auction_house::accounts::CancelBidReceipt {
         receipt: bid_receipt,
-        system_program: solana_program::system_program::id(),
+        system_program: safecoin_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);

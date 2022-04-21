@@ -9,14 +9,14 @@ use mpl_nft_packs::{
     state::{PackDistributionType, ProvingProcess},
 };
 use num_traits::FromPrimitive;
-use solana_program::{
+use safecoin_program::{
     clock::Clock,
     instruction::{AccountMeta, Instruction},
     program_pack::Pack,
     pubkey::Pubkey,
     system_instruction, system_program, sysvar,
 };
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     instruction::InstructionError,
     signature::Keypair,
@@ -111,7 +111,7 @@ async fn success_fixed_probability() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -273,7 +273,7 @@ async fn success_max_supply_probability() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -429,7 +429,7 @@ async fn success_claim_two_same_cards() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -613,7 +613,7 @@ async fn success_claim_decrement_redeem_cards() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -816,7 +816,7 @@ async fn success_claim_two_indexes() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -1014,7 +1014,7 @@ async fn success_claim_after_redeem_end_date() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -1167,7 +1167,7 @@ async fn fail_wrong_user_wallet() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],
@@ -1406,7 +1406,7 @@ async fn fail_claim_twice() {
             &edition_authority.pubkey(),
             100000000000000,
             0,
-            &solana_program::system_program::id(),
+            &safecoin_program::system_program::id(),
         )],
         Some(&context.payer.pubkey()),
         &[&context.payer, &edition_authority],

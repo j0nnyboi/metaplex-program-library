@@ -7,7 +7,7 @@ use crate::{
     find_proving_process_program_address, state::PackDistributionType,
 };
 use borsh::{BorshDeserialize, BorshSerialize};
-use solana_program::{
+use safecoin_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     system_program, sysvar,

@@ -9,14 +9,14 @@ use mpl_token_metadata::{
     utils::puffed_out_string,
 };
 
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     signature::{Keypair, Signer},
 };
 use utils::*;
 use borsh::{BorshSerialize};
 use mpl_token_metadata::state::{UseAuthorityRecord};
-use solana_program::borsh::try_from_slice_unchecked;
+use safecoin_program::borsh::try_from_slice_unchecked;
 use solana_sdk::account::{Account, AccountSharedData};
 use solana_sdk::transaction::Transaction;
 use mpl_token_metadata::pda::{find_program_as_burner_account, find_use_authority_account};

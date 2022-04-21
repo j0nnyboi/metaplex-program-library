@@ -2,11 +2,11 @@
 //! A private bid is a bid on a specific NFT *held by a specific person*. A public bid is a bid on a specific NFT *regardless of who holds it*.
 use anchor_lang::{
     prelude::*,
-    solana_program::{program::invoke, system_instruction},
+    safecoin_program::{program::invoke, system_instruction},
     AnchorDeserialize,
 };
 use anchor_spl::token::{Mint, Token, TokenAccount};
-use solana_program::program_memory::sol_memset;
+use safecoin_program::program_memory::sol_memset;
 
 use crate::{constants::*, utils::*, AuctionHouse, ErrorCode, TRADE_STATE_SIZE};
 

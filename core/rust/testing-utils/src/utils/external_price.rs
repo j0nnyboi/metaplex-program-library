@@ -1,8 +1,8 @@
 use crate::utils::*;
 
 use mpl_token_vault;
-use solana_program::{borsh::try_from_slice_unchecked, system_instruction};
-use solana_program_test::*;
+use safecoin_program::{borsh::try_from_slice_unchecked, system_instruction};
+use safecoin_program_test::*;
 use solana_sdk::{
     pubkey::Pubkey, signature::Signer, signer::keypair::Keypair, transaction::Transaction,
     transport,

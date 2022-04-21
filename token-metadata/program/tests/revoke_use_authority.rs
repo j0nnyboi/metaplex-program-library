@@ -4,7 +4,7 @@ mod utils;
 use mpl_token_metadata::state::{UseAuthorityRecord, UseMethod, Uses};
 
 use mpl_token_metadata::pda::find_use_authority_account;
-use solana_program_test::*;
+use safecoin_program_test::*;
 use solana_sdk::{
     signature::{Keypair, Signer},
     transaction::Transaction,
@@ -12,7 +12,7 @@ use solana_sdk::{
 use utils::*;
 mod revoke_use_authority {
     use mpl_token_metadata::pda::find_program_as_burner_account;
-    use solana_program::{borsh::try_from_slice_unchecked};
+    use safecoin_program::{borsh::try_from_slice_unchecked};
     
 
     use super::*;

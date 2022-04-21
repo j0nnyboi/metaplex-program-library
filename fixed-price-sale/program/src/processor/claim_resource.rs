@@ -1,5 +1,5 @@
 use crate::{error::ErrorCode, state::MarketState, utils::*, ClaimResource};
-use anchor_lang::{prelude::*, solana_program::program_pack::Pack, System};
+use anchor_lang::{prelude::*, safecoin_program::program_pack::Pack, System};
 use anchor_spl::token;
 
 impl<'info> ClaimResource<'info> {
