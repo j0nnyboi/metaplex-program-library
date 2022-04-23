@@ -2,7 +2,7 @@
 
 
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::{Keypair, Signer},
 };
 
@@ -16,7 +16,7 @@ mod utils;
 
 mod sign_metadata {
     
-    use solana_sdk::transaction::Transaction;
+    use safecoin_sdk::transaction::Transaction;
 
     use mpl_token_metadata::instruction::{remove_creator_verification, sign_metadata};
     use mpl_token_metadata::state::{Creator};

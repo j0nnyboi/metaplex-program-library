@@ -6,7 +6,7 @@ use mpl_nft_packs::{
 };
 use safecoin_program::{clock::Clock, system_instruction};
 use safecoin_program_test::*;
-use solana_sdk::{signature::Keypair, signer::Signer, transaction::Transaction};
+use safecoin_sdk::{signature::Keypair, signer::Signer, transaction::Transaction};
 use utils::*;
 
 async fn setup() -> (

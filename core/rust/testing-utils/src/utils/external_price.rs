@@ -3,7 +3,7 @@ use crate::utils::*;
 use mpl_token_vault;
 use safecoin_program::{borsh::try_from_slice_unchecked, system_instruction};
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     pubkey::Pubkey, signature::Signer, signer::keypair::Keypair, transaction::Transaction,
     transport,
 };

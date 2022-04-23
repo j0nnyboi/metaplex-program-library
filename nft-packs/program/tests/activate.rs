@@ -8,7 +8,7 @@ use mpl_nft_packs::{
 use num_traits::FromPrimitive;
 use safecoin_program::{instruction::InstructionError, system_instruction};
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::Keypair,
     signer::Signer,
     transaction::{Transaction, TransactionError},

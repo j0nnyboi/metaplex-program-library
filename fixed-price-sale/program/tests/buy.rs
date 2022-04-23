@@ -26,7 +26,7 @@ mod buy {
     };
     use safecoin_program::{clock::Clock, instruction::AccountMeta};
     use safecoin_program_test::*;
-    use solana_sdk::{
+    use safecoin_sdk::{
         instruction::{Instruction, InstructionError},
         program_pack::Pack,
         pubkey::Pubkey,

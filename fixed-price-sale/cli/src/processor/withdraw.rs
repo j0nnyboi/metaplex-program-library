@@ -4,7 +4,7 @@ use super::{get_account_state, UiTransactionInfo};
 use crate::error;
 use anchor_lang::{prelude::AccountMeta, InstructionData, ToAccountMetas};
 use solana_client::rpc_client::RpcClient;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::Instruction,
     pubkey::Pubkey,
     signature::Signer,

@@ -11,7 +11,7 @@ use safecoin_program::{
     clock::Clock, instruction::InstructionError, program_pack::Pack, system_instruction,
 };
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::Keypair,
     signer::Signer,
     transaction::{Transaction, TransactionError},

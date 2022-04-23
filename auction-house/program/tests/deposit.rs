@@ -2,7 +2,7 @@
 pub mod utils;
 use mpl_testing_utils::{solana::airdrop, utils::Metadata};
 use safecoin_program_test::*;
-use solana_sdk::{signature::Keypair, signer::Signer};
+use safecoin_sdk::{signature::Keypair, signer::Signer};
 use std::assert_eq;
 use utils::setup_functions::*;
 

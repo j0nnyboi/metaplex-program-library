@@ -1,6 +1,6 @@
 use std::io;
 
-use anchor_client::solana_sdk::{
+use anchor_client::safecoin_sdk::{
     pubkey::Pubkey,
     signature::{Keypair, Signer},
     system_program, sysvar,
@@ -20,7 +20,7 @@ use mpl_testing_utils::{solana::airdrop, utils::Metadata};
 
 use mpl_token_metadata::pda::find_metadata_account;
 use safecoin_program_test::*;
-use solana_sdk::{instruction::Instruction, transaction::Transaction, transport::TransportError};
+use safecoin_sdk::{instruction::Instruction, transaction::Transaction, transport::TransportError};
 use spl_associated_token_account::get_associated_token_address;
 
 pub fn auction_house_program_test<'a>() -> ProgramTest {

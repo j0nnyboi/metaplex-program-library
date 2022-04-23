@@ -10,7 +10,7 @@ use mpl_fixed_price_sale::{
     utils::{find_treasury_owner_address, find_vault_owner_address},
 };
 use safecoin_program_test::ProgramTestContext;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::Instruction,
     signature::Keypair,
     signer::Signer,

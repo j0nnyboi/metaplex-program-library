@@ -8,7 +8,7 @@ use mpl_testing_utils::{
     solana::{airdrop, create_associated_token_account, create_mint},
 };
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::InstructionError, signature::Keypair, signer::Signer,
     transaction::TransactionError, transport::TransportError,
 };

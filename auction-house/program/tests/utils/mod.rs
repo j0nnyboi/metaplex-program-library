@@ -8,7 +8,7 @@ pub mod setup_functions;
 
 // use anchor_client::{
 //     solana_client::{client_error::ClientError, rpc_client::RpcClient},
-//     solana_sdk::{
+//     safecoin_sdk::{
 //         program_pack::Pack, pubkey::Pubkey, signature::Keypair, signer::Signer, system_instruction,
 //         system_program, sysvar, transaction::Transaction,
 //     },

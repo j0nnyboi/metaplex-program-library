@@ -19,7 +19,7 @@ use {
     },
     solana_client::rpc_client::RpcClient,
     safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack},
-    solana_sdk::{
+    safecoin_sdk::{
         pubkey::Pubkey,
         signature::{read_keypair_file, Keypair, Signer},
         system_instruction::create_account,

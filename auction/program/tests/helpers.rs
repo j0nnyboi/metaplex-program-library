@@ -7,7 +7,7 @@ use mpl_auction::{
 };
 use safecoin_program::{hash::Hash, program_pack::Pack, pubkey::Pubkey, system_instruction};
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     account::Account,
     signature::{Keypair, Signer},
     transaction::Transaction,

@@ -1,13 +1,13 @@
 #![allow(unused)]
 
-use anchor_client::solana_sdk::{
+use anchor_client::safecoin_sdk::{
     pubkey::Pubkey,
     signer::{keypair::Keypair, Signer},
 };
 use mpl_token_metadata::state::Collection;
 use safecoin_program::{clock::Clock, system_instruction};
 use safecoin_program_test::*;
-use solana_sdk::{program_pack::Pack, transaction::Transaction};
+use safecoin_sdk::{program_pack::Pack, transaction::Transaction};
 use std::convert::TryFrom;
 
 pub async fn mint_to(

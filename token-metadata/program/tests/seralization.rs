@@ -7,7 +7,7 @@ use mpl_token_metadata::{state::MAX_MASTER_EDITION_LEN, utils::try_from_slice_ch
 
 use safecoin_program::borsh::try_from_slice_unchecked;
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::{Signer},
 };
 use utils::*;

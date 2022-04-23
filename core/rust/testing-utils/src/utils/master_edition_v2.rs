@@ -11,7 +11,7 @@ use safecoin_program::{
     sysvar,
 };
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     pubkey::Pubkey,
     signature::{Keypair, Signer},
     transaction::Transaction,

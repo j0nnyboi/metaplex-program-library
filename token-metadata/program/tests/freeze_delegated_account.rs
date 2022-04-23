@@ -7,7 +7,7 @@ use mpl_token_metadata::error::MetadataError;
 
 use num_traits::FromPrimitive;
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
     transaction::{Transaction, TransactionError},

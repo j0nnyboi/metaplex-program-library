@@ -20,7 +20,7 @@ mod withdraw {
     };
     use safecoin_program::clock::Clock;
     use safecoin_program_test::*;
-    use solana_sdk::{
+    use safecoin_sdk::{
         account::ReadableAccount,
         instruction::{AccountMeta, Instruction},
         program_pack::Pack,

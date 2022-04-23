@@ -2,7 +2,7 @@ use crate::*;
 use mpl_nft_packs::{find_pack_voucher_program_address, state::PackVoucher};
 use safecoin_program::{program_pack::Pack, pubkey::Pubkey};
 use safecoin_program_test::*;
-use solana_sdk::{signature::Signer, signer::keypair::Keypair};
+use safecoin_sdk::{signature::Signer, signer::keypair::Keypair};
 
 #[derive(Debug)]
 pub struct TestPackVoucher {

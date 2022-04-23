@@ -11,8 +11,8 @@ use safecoin_program::{
     sysvar,
 };
 use safecoin_program_test::*;
-use solana_sdk::signature::Keypair;
-use solana_sdk::{pubkey::Pubkey, signature::Signer, transaction::Transaction, transport};
+use safecoin_sdk::signature::Keypair;
+use safecoin_sdk::{pubkey::Pubkey, signature::Signer, transaction::Transaction, transport};
 
 #[derive(Debug)]
 pub struct TestMasterEditionV2 {

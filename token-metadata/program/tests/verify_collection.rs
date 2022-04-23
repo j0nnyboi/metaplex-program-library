@@ -11,7 +11,7 @@ use mpl_token_metadata::{
 };
 use num_traits::FromPrimitive;
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
     transaction::TransactionError,
@@ -22,7 +22,7 @@ mod verify_collection {
 
     use mpl_token_metadata::state::{COLLECTION_AUTHORITY_RECORD_SIZE, CollectionAuthorityRecord};
     use safecoin_program::borsh::try_from_slice_unchecked;
-    use solana_sdk::transaction::Transaction;
+    use safecoin_sdk::transaction::Transaction;
 
     use super::*;
     #[tokio::test]

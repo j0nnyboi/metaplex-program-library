@@ -5,7 +5,7 @@
 
 //     use super::utils::setup_functions::{setup_auction_house, setup_client, setup_program};
 //     use anchor_client::{
-//         solana_sdk::{signature::Keypair, signer::Signer, system_program, sysvar},
+//         safecoin_sdk::{signature::Keypair, signer::Signer, system_program, sysvar},
 //         ClientError,
 //     };
 //     use mpl_auction_house::{

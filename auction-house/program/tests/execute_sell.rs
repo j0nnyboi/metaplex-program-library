@@ -4,7 +4,7 @@ pub mod utils;
 use anchor_lang::{prelude::*, AccountDeserialize, InstructionData, ToAccountMetas};
 use mpl_testing_utils::{solana::airdrop, utils::Metadata};
 use safecoin_program_test::*;
-use solana_sdk::signer::Signer;
+use safecoin_sdk::signer::Signer;
 
 use std::assert_eq;
 
@@ -16,7 +16,7 @@ use mpl_auction_house::{
     pda::{find_escrow_payment_address, find_program_as_signer_address, find_trade_state_address},
     receipt::{BidReceipt, ListingReceipt, PurchaseReceipt},
 };
-use solana_sdk::{signature::Keypair, transaction::Transaction};
+use safecoin_sdk::{signature::Keypair, transaction::Transaction};
 use spl_associated_token_account::get_associated_token_address;
 use spl_token::state::Account;
 use utils::setup_functions::*;

@@ -22,7 +22,7 @@ pub use pack_set::TestPackSet;
 pub use pack_voucher::TestPackVoucher;
 use safecoin_program::clock::Clock;
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     account::Account, program_pack::Pack, pubkey::Pubkey, signature::Signer,
     signer::keypair::Keypair, system_instruction, transaction::Transaction, transport,
 };

@@ -5,7 +5,7 @@ use mpl_token_metadata::state::{UseAuthorityRecord, UseMethod, Uses};
 
 use mpl_token_metadata::pda::find_use_authority_account;
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::{Keypair, Signer},
     transaction::Transaction,
 };

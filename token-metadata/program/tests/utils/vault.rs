@@ -2,7 +2,7 @@ use super::{create_mint, create_token_account, ExternalPrice, Metadata};
 use mpl_token_vault::{instruction, state::PREFIX};
 use safecoin_program::{pubkey::Pubkey, system_instruction};
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::{Keypair, Signer},
     transaction::Transaction,
     transport,

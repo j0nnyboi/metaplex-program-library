@@ -4,7 +4,7 @@
 
 use crate::error;
 use solana_client::rpc_client::RpcClient;
-use solana_sdk::{
+use safecoin_sdk::{
     program_pack::Pack,
     pubkey::Pubkey,
     signer::{keypair::Keypair, Signer},

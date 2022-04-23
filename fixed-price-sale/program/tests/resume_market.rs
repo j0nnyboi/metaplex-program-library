@@ -16,7 +16,7 @@ mod resume_market {
         utils::find_treasury_owner_address,
     };
     use safecoin_program_test::*;
-    use solana_sdk::{
+    use safecoin_sdk::{
         instruction::Instruction,
         signature::Keypair,
         signer::Signer,

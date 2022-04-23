@@ -5,7 +5,7 @@ use mpl_token_metadata::{
 };
 use safecoin_program::borsh::try_from_slice_unchecked;
 
-use solana_sdk::{
+use safecoin_sdk::{
     pubkey::Pubkey, signature::Signer, signer::keypair::Keypair, transaction::Transaction,
     transport,
 };

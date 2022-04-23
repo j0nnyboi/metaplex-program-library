@@ -10,18 +10,18 @@ use mpl_token_metadata::{
 };
 
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::{Keypair, Signer},
 };
 use utils::*;
 use borsh::{BorshSerialize};
 use mpl_token_metadata::state::{UseAuthorityRecord};
 use safecoin_program::borsh::try_from_slice_unchecked;
-use solana_sdk::account::{Account, AccountSharedData};
-use solana_sdk::transaction::Transaction;
+use safecoin_sdk::account::{Account, AccountSharedData};
+use safecoin_sdk::transaction::Transaction;
 use mpl_token_metadata::pda::{find_program_as_burner_account, find_use_authority_account};
 use mpl_token_metadata::state::Key as MetadataKey;
-use solana_sdk::account::{ReadableAccount, WritableAccount};
+use safecoin_sdk::account::{ReadableAccount, WritableAccount};
 mod bump_seed_migration {
     
     

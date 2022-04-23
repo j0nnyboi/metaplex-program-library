@@ -1,5 +1,5 @@
 use solana_client::rpc_request::TokenAccountsFilter;
-use solana_sdk::account::ReadableAccount;
+use safecoin_sdk::account::ReadableAccount;
 
 use {
     clap::{crate_description, crate_name, crate_version, App, Arg, ArgMatches, SubCommand},
@@ -22,7 +22,7 @@ use {
     safecoin_program::{
         account_info::AccountInfo, borsh::try_from_slice_unchecked, program_pack::Pack,
     },
-    solana_sdk::{
+    safecoin_sdk::{
         pubkey::Pubkey,
         signature::{read_keypair_file, Keypair, Signer},
         system_instruction::create_account,

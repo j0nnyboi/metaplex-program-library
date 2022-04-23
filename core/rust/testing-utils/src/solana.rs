@@ -1,11 +1,11 @@
 use safecoin_program_test::ProgramTestContext;
-use solana_sdk::pubkey::Pubkey;
-use solana_sdk::signature::Keypair;
-use solana_sdk::signer::Signer;
-use solana_sdk::system_instruction;
-use solana_sdk::transaction::Transaction;
-use solana_sdk::transport::TransportError;
-use solana_sdk::{account::Account, program_pack::Pack};
+use safecoin_sdk::pubkey::Pubkey;
+use safecoin_sdk::signature::Keypair;
+use safecoin_sdk::signer::Signer;
+use safecoin_sdk::system_instruction;
+use safecoin_sdk::transaction::Transaction;
+use safecoin_sdk::transport::TransportError;
+use safecoin_sdk::{account::Account, program_pack::Pack};
 use spl_token::state::Mint;
 /// Perform native lamports transfer.
 pub async fn transfer_lamports(

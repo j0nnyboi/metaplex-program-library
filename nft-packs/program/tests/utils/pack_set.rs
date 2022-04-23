@@ -7,7 +7,7 @@ use safecoin_program::{
     instruction::AccountMeta, program_pack::Pack, pubkey::Pubkey, system_instruction,
 };
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     signature::Signer, signer::keypair::Keypair, transaction::Transaction, transport,
 };
 use spl_token::state::Account;

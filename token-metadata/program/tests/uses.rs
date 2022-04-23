@@ -4,7 +4,7 @@ mod utils;
 use mpl_token_metadata::state::{UseMethod, Uses};
 use num_traits::FromPrimitive;
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::InstructionError, signature::Signer, transaction::Transaction,
     transaction::TransactionError, transport::TransportError,
 };
@@ -18,7 +18,7 @@ mod uses {
         state::{Key, UseAuthorityRecord},
     };
     use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
-    use solana_sdk::signature::Keypair;
+    use safecoin_sdk::signature::Keypair;
     use spl_token::state::Account;
 
     use super::*;

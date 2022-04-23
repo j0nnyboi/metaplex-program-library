@@ -20,7 +20,7 @@ mod claim_resource {
     };
     use safecoin_program::clock::Clock;
     use safecoin_program_test::*;
-    use solana_sdk::{
+    use safecoin_sdk::{
         instruction::{AccountMeta, Instruction},
         pubkey::Pubkey,
         signature::Keypair,

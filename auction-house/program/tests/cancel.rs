@@ -2,14 +2,14 @@
 pub mod utils;
 use anchor_lang::{prelude::*, AccountDeserialize, InstructionData, ToAccountMetas};
 
-use anchor_client::solana_sdk::sysvar;
+use anchor_client::safecoin_sdk::sysvar;
 use mpl_auction_house::{
     pda::{find_bid_receipt_address, find_listing_receipt_address},
     receipt::{BidReceipt, ListingReceipt},
 };
 use mpl_testing_utils::{solana::airdrop, utils::Metadata};
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::Instruction,
     signature::{Keypair, Signer},
     transaction::Transaction,

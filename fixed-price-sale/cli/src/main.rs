@@ -7,7 +7,7 @@ use chrono::prelude::*;
 use clap::Parser;
 use cli_args::{CliArgs, Commands};
 use solana_client::rpc_client::RpcClient;
-use solana_sdk::{
+use safecoin_sdk::{
     pubkey::Pubkey,
     signer::{keypair::read_keypair_file, Signer},
     transaction::Transaction,

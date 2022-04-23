@@ -17,7 +17,7 @@ use safecoin_program::{
     account_info::AccountInfo, decode_error::DecodeError, program_error::ProgramError,
 };
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     account::Account,
     bs58,
     instruction::{AccountMeta, Instruction},

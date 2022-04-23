@@ -17,7 +17,7 @@ use safecoin_program::{
     system_instruction, system_program, sysvar,
 };
 use safecoin_program_test::*;
-use solana_sdk::{
+use safecoin_sdk::{
     instruction::InstructionError,
     signature::Keypair,
     signer::Signer,
