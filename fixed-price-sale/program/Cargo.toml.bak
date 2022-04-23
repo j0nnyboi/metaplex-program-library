@@ -24,7 +24,7 @@ mpl-token-metadata = { features = [ "no-entrypoint" ], version="~1.1.0" }
 
 [dev-dependencies]
 anchor-client = "~0.22"
-safecoin-program-test = "~1.8.12"
-safecoin-program = "~1.8.12"
+safecoin-program-test = "~1.9.5"
+safecoin-program = "~1.9.5"
 safecoin-sdk = "~1.9.5"
 spl-associated-token-account = "~1.0.3"

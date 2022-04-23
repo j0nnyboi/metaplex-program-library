@@ -27,5 +27,5 @@ spl-associated-token-account = { version = "1.0.3", features = [
   "no-entrypoint",
 ] }
 anchor-spl = "=0.21.0"
-safecoin-program = "~1.8.12"
-safecoin-gateway = "0.1.1"
+safecoin-program = "1.9.6"
+solana-gateway = "0.1.1"
