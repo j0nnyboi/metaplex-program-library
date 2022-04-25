@@ -19,13 +19,11 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-anchor-lang = "=0.21.0"
+anchor-lang = {path = "../../../anchor/lang"}
 arrayref = "0.3.6"
-spl-token = { version = "3.2.0", features = ["no-entrypoint"] }
-mpl-token-metadata = { version = "1.2.5", features = ["no-entrypoint"] }
-spl-associated-token-account = { version = "1.0.3", features = [
-  "no-entrypoint",
-] }
-anchor-spl = "=0.21.0"
+safe-token = { features = ["no-entrypoint"],path = "../../../safecoin-program-lib/libraries/safe-token/program" }
+mpl-token-metadata = { features = ["no-entrypoint"], path="../../token-metadata/program" }
+safe-associated-token-account = { features = ["no-entrypoint",] ,path = "../../../safecoin-program-lib/libraries/safe-associated-token-account/program"}
+anchor-spl = {path = "../../../anchor/spl"}
 safecoin-program = "~1.8.12"
-safecoin-gateway = "0.1.1"
+safecoin-gateway = "~1.8.12"

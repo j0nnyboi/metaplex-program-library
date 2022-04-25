@@ -9,7 +9,7 @@ import { strict as assert } from 'assert';
 import { Borsh, Transaction } from '@metaplex-foundation/mpl-core';
 import { MetadataProgram } from '@metaplex-foundation/mpl-token-metadata';
 import { ParamsWithStore, VaultProgram } from './vault';
-import { TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 import {
   PublicKey,
   SystemProgram,

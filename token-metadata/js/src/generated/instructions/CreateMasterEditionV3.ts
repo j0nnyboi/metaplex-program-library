@@ -5,7 +5,7 @@
  * See: https://github.com/metaplex-foundation/solita
  */
 
-import * as splToken from '@safecoin/spl-token';
+import * as splToken from '@safecoin/safe-token';
 import * as beet from '@j0nnyboi/beet';
 import * as web3 from '@safecoin/web3.js';
 import {

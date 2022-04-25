@@ -4,7 +4,7 @@
 // -----------------
 // TODO(thlorenz): remove and use released ones once we can
 
-import { TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 import { Commitment, Connection, PublicKey } from '@safecoin/web3.js';
 import * as beet from '@j0nnyboi/beet';
 import * as beetSolana from '@j0nnyboi/beet-safecoin';

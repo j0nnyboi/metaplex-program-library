@@ -3,7 +3,7 @@ import {
   AuthorityType,
   createSetAuthorityInstruction,
   MintLayout,
-} from '@safecoin/spl-token';
+} from '@safecoin/safe-token';
 import {
   Connection,
   Keypair,

@@ -17,7 +17,7 @@ import {
 } from '@safecoin/web3.js';
 import { AuctionProgram } from '../AuctionProgram';
 import BN from 'bn.js';
-import { TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 
 export class PlaceBidArgs extends Borsh.Data<{ resource: StringPublicKey; amount: BN }> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

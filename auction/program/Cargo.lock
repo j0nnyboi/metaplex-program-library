@@ -2661,12 +2661,12 @@ dependencies = [
  "safecoin-program",
  "safecoin-program-test",
  "safecoin-sdk",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
 [[package]]
-name = "spl-token"
+name = "safe-token"
 version = "3.1.0"
 dependencies = [
  "arrayref",

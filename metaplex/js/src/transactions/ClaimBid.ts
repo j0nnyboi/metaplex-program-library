@@ -8,7 +8,7 @@
 import { Borsh, Transaction } from '@metaplex-foundation/mpl-core';
 import { ParamsWithStore } from './vault';
 import { AuctionProgram } from '@metaplex-foundation/mpl-auction';
-import { TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 import {
   PublicKey,
   SYSVAR_CLOCK_PUBKEY,

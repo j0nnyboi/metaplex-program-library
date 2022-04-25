@@ -5,7 +5,7 @@ import {
   // @ts-ignore createInitializeAccountInstruction export actually exist but isn't setup correctly
   createInitializeAccountInstruction,
   TOKEN_PROGRAM_ID,
-} from '@safecoin/spl-token';
+} from '@safecoin/safe-token';
 
 export const createTokenAccount = async ({
   payer,

@@ -1,7 +1,7 @@
 import { strict as assert } from 'assert';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore createInitializeMintInstruction export actually exist but isn't setup correctly
-import { createInitializeMintInstruction, MintLayout, TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { createInitializeMintInstruction, MintLayout, TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 import {
   Connection,
   Keypair,

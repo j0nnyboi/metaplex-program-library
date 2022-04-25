@@ -6,7 +6,7 @@
  * that would be a wasted effort and therefore we make an EXCEPTION here.
  */
 import { Borsh, StringPublicKey, Transaction } from '@metaplex-foundation/mpl-core';
-import { TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 import {
   PublicKey,
   SystemProgram,

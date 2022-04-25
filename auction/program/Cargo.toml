@@ -17,13 +17,13 @@ num-derive = "~0.3"
 num-traits = "~0.2"
 arrayref = "~0.3.6"
 safecoin-program = "~1.8.12"
-spl-token = { version="~3.2.0", features = [ "no-entrypoint" ] }
+safe-token = { features = [ "no-entrypoint" ],path = "../../../safecoin-program-lib/libraries/safe-token/program" }
 thiserror = "~1.0"
 
 [dev-dependencies]
 safecoin-program-test = "~1.8.12"
-safecoin-sdk = "~1.9.5"
-mpl-testing-utils = {path="../../core/rust/testing-utils", version="0.0.2"}
+safecoin-sdk = "~1.8.12"
+mpl-testing-utils = {path="../../core/rust/testing-utils"}
 
 [lib]
 crate-type = ["cdylib", "lib"]

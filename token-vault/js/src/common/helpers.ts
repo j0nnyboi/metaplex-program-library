@@ -8,7 +8,7 @@ import {
   getAssociatedTokenAddress,
   MintLayout,
   TOKEN_PROGRAM_ID,
-} from '@safecoin/spl-token';
+} from '@safecoin/safe-token';
 import {
   Connection,
   Keypair,

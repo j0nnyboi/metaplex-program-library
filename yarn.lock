@@ -926,8 +926,8 @@ __metadata:
   version: 0.1.0
   resolution: "@j0nnyboi/amman@npm:0.1.0"
   dependencies:
-    "@safecoin/spl-token": ^0.1.8
-    "@safecoin/spl-token-registry": ^0.2.2405
+    "@safecoin/safe-token": ^0.1.8
+    "@safecoin/safe-token-registry": ^0.2.2405
     "@safecoin/web3.js": ^1.35.0
     bn.js: ^5.2.0
     debug: ^4.3.3
@@ -1009,7 +1009,7 @@ __metadata:
   resolution: "@metaplex-foundation/mpl-auction@workspace:auction/js"
   dependencies:
     "@metaplex-foundation/mpl-core": ^0.0.5
-    "@safecoin/spl-token": ^0.2.0
+    "@safecoin/safe-token": ^0.2.0
     "@safecoin/web3.js": ^1.35.1
     eslint: ^8.3.0
     rimraf: ^3.0.2
@@ -1060,7 +1060,7 @@ __metadata:
   version: 0.0.5
   resolution: "@metaplex-foundation/mpl-core@npm:0.0.5"
   dependencies:
-    "@safecoin/spl-token": ^0.1.8
+    "@safecoin/safe-token": ^0.1.8
     "@safecoin/web3.js": ^1.35.1
     bs58: ^4.0.1
   checksum: 2e5913ab2f050d5e26152b872633f80069432356d576e16f0725781738a1f1eea8a84682baa00f59f8501c6ceda07e2356ab6b3c67812d4dcb73efb4e123c3e8
@@ -1078,7 +1078,7 @@ __metadata:
     "@metaplex-foundation/mpl-token-metadata": 2.0.0
     "@metaplex-foundation/solita": ^0.2.0
     "@solana/buffer-layout": ^4.0.0
-    "@safecoin/spl-token": ^0.2.0
+    "@safecoin/safe-token": ^0.2.0
     "@safecoin/web3.js": ^1.37.0
     "@types/bn.js": ^5.1.0
     "@types/debug": ^4.1.7
@@ -1119,7 +1119,7 @@ __metadata:
     "@metaplex-foundation/mpl-core": ^0.0.5
     "@metaplex-foundation/mpl-token-metadata": ^0.0.2
     "@metaplex-foundation/mpl-token-vault": ^0.0.2
-    "@safecoin/spl-token": ^0.2.0
+    "@safecoin/safe-token": ^0.2.0
     "@safecoin/web3.js": ^1.35.1
     esbuild: ^0.14.14
     esbuild-runner: ^2.2.1
@@ -1154,7 +1154,7 @@ __metadata:
     "@j0nnyboi/beet-safecoin": ^0.1.1
     "@metaplex-foundation/cusper": ^0.0.2
     "@metaplex-foundation/mpl-core": ^0.0.5
-    "@safecoin/spl-token": ^0.2.0
+    "@safecoin/safe-token": ^0.2.0
     "@safecoin/web3.js": ^1.35.1
     bn.js: ^5.2.0
     debug: ^4.3.3
@@ -1167,7 +1167,7 @@ __metadata:
   resolution: "@metaplex-foundation/mpl-token-metadata@npm:0.0.2"
   dependencies:
     "@metaplex-foundation/mpl-core": ^0.0.2
-    "@safecoin/spl-token": ^0.1.8
+    "@safecoin/safe-token": ^0.1.8
     "@safecoin/web3.js": ^1.31.0
   checksum: 03064927d289cd3de12b238c233cb06ce7476338b7bf203e5c02828048d0e51c438ba90c9151d24c379618270cfcd05cee327ca9dc7b100d1108c4301ad3388b
   languageName: node
@@ -1181,7 +1181,7 @@ __metadata:
     "@j0nnyboi/beet-safecoin": ^0.1.1
     "@metaplex-foundation/cusper": ^0.0.2
     "@metaplex-foundation/solita": ^0.2.0
-    "@safecoin/spl-token": ^0.2.0
+    "@safecoin/safe-token": ^0.2.0
     "@safecoin/web3.js": ^1.35.1
     "@types/bn.js": ^5.1.0
     "@types/debug": ^4.1.7
@@ -1203,7 +1203,7 @@ __metadata:
     "@j0nnyboi/beet-safecoin": ^0.1.1
     "@metaplex-foundation/cusper": ^0.0.2
     "@metaplex-foundation/mpl-core": ^0.0.5
-    "@safecoin/spl-token": ^0.2.0
+    "@safecoin/safe-token": ^0.2.0
     "@safecoin/web3.js": ^1.35.1
     "@types/debug": ^4.1.7
     bn.js: ^5.2.0
@@ -1571,18 +1571,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@safecoin/spl-token-registry@npm:^0.2.2405":
+"@safecoin/safe-token-registry@npm:^0.2.2405":
   version: 0.2.3206
-  resolution: "@safecoin/spl-token-registry@npm:0.2.3206"
+  resolution: "@safecoin/safe-token-registry@npm:0.2.3206"
   dependencies:
     cross-fetch: 3.0.6
   checksum: 002ce1aca941fe8acb97a9cb01616554c7588d0519668c536c020be51ae70934418e8867387b1433e8219fdf4d5b32da22ed832cc7d8d8da966dee63afc103f0
   languageName: node
   linkType: hard
 
-"@safecoin/spl-token@npm:^0.1.8":
+"@safecoin/safe-token@npm:^0.1.8":
   version: 0.1.8
-  resolution: "@safecoin/spl-token@npm:0.1.8"
+  resolution: "@safecoin/safe-token@npm:0.1.8"
   dependencies:
     "@babel/runtime": ^7.10.5
     "@safecoin/web3.js": ^1.21.0
@@ -1594,9 +1594,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@safecoin/spl-token@npm:^0.2.0":
+"@safecoin/safe-token@npm:^0.2.0":
   version: 0.2.0
-  resolution: "@safecoin/spl-token@npm:0.2.0"
+  resolution: "@safecoin/safe-token@npm:0.2.0"
   dependencies:
     "@solana/buffer-layout": ^4.0.0
     "@solana/buffer-layout-utils": ^0.2.0

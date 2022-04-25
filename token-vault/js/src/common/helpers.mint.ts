@@ -1,7 +1,7 @@
 // Lifted from solana-labs/spl/token/ts/src/state/mint.ts
-// Should be removed once these functions are exported from the spl-token module.
+// Should be removed once these functions are exported from the safe-token module.
 
-import { MintLayout, TOKEN_PROGRAM_ID } from '@safecoin/spl-token';
+import { MintLayout, TOKEN_PROGRAM_ID } from '@safecoin/safe-token';
 import { Commitment, Connection, PublicKey } from '@safecoin/web3.js';
 
 export interface Mint {

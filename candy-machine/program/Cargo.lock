@@ -172,8 +172,8 @@ checksum = "cc245f1d18992ad44236dc15717a9875e1184a164b931c506ba9dc7a2258804f"
 dependencies = [
  "anchor-lang",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -757,8 +757,8 @@ dependencies = [
  "mpl-token-metadata",
  "solana-gateway",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -773,8 +773,8 @@ dependencies = [
  "num-derive",
  "num-traits",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
  "thiserror",
 ]
 
@@ -788,7 +788,7 @@ dependencies = [
  "num-derive",
  "num-traits",
  "safecoin-program",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
@@ -1225,17 +1225,17 @@ dependencies = [
 ]
 
 [[package]]
-name = "spl-associated-token-account"
+name = "safe-associated-token-account"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "393e2240d521c3dd770806bff25c2c00d761ac962be106e14e22dd912007f428"
 dependencies = [
  "safecoin-program",
- "spl-token",
+ "safe-token",
 ]
 
 [[package]]
-name = "spl-token"
+name = "safe-token"
 version = "3.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "93bfdd5bd7c869cb565c7d7635c4fafe189b988a0bdef81063cd9585c6b8dc01"

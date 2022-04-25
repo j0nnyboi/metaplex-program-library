@@ -520,8 +520,8 @@ checksum = "362427b7620190bae716daee6aaf2a12022b289c7b87673ad124a3c83bee85ac"
 dependencies = [
  "anchor-lang 0.19.0",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -532,8 +532,8 @@ checksum = "bcdf03d76450451f6c587098fa0d9775dc7eabf9173c89bd1bb17dd72b49e748"
 dependencies = [
  "anchor-lang 0.22.1",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -544,8 +544,8 @@ checksum = "383035b6eed94be902577947cb1ffc305786a55c965503143f2306554942b3c1"
 dependencies = [
  "anchor-lang 0.24.1",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -2107,7 +2107,7 @@ dependencies = [
  "solana-client",
  "safecoin-program",
  "safecoin-sdk",
- "spl-token",
+ "safe-token",
 ]
 
 [[package]]
@@ -2160,7 +2160,7 @@ dependencies = [
  "safecoin-program",
  "safecoin-program-test",
  "safecoin-sdk",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2175,8 +2175,8 @@ dependencies = [
  "safecoin-program",
  "safecoin-program-test",
  "safecoin-sdk",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -2193,8 +2193,8 @@ dependencies = [
  "safecoin-program",
  "safecoin-program-test",
  "safecoin-sdk",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2215,7 +2215,7 @@ dependencies = [
  "safecoin-program-test",
  "safecoin-sdk",
  "spl-math",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2236,8 +2236,8 @@ dependencies = [
  "safecoin-program",
  "safecoin-program-test",
  "safecoin-sdk",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
 ]
 
 [[package]]
@@ -2248,8 +2248,8 @@ dependencies = [
  "anchor-spl 0.24.1",
  "arrayref",
  "mpl-token-metadata 1.2.7",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2265,8 +2265,8 @@ dependencies = [
  "num-derive",
  "num-traits",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2281,8 +2281,8 @@ dependencies = [
  "num-traits",
  "shank",
  "safecoin-program",
- "spl-associated-token-account",
- "spl-token",
+ "safe-associated-token-account",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2296,7 +2296,7 @@ dependencies = [
  "num-derive",
  "num-traits",
  "safecoin-program",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2309,7 +2309,7 @@ dependencies = [
  "num-traits",
  "shank",
  "safecoin-program",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
@@ -2321,7 +2321,7 @@ dependencies = [
  "anchor-spl 0.19.0",
  "mpl-token-metadata 1.1.0",
  "safecoin-program",
- "spl-associated-token-account",
+ "safe-associated-token-account",
 ]
 
 [[package]]
@@ -3285,7 +3285,7 @@ dependencies = [
  "solana-config-program",
  "safecoin-sdk",
  "solana-vote-program",
- "spl-token",
+ "safe-token",
  "thiserror",
  "zstd",
 ]
@@ -3938,9 +3938,9 @@ dependencies = [
  "solana-runtime",
  "safecoin-sdk",
  "solana-vote-program",
- "spl-associated-token-account",
+ "safe-associated-token-account",
  "spl-memo",
- "spl-token",
+ "safe-token",
  "thiserror",
 ]
 
@@ -4007,13 +4007,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 
 [[package]]
-name = "spl-associated-token-account"
+name = "safe-associated-token-account"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "393e2240d521c3dd770806bff25c2c00d761ac962be106e14e22dd912007f428"
 dependencies = [
  "safecoin-program",
- "spl-token",
+ "safe-token",
 ]
 
 [[package]]
@@ -4041,7 +4041,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "spl-token"
+name = "safe-token"
 version = "3.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "93bfdd5bd7c869cb565c7d7635c4fafe189b988a0bdef81063cd9585c6b8dc01"

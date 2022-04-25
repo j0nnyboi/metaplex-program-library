@@ -1,7 +1,7 @@
 import { Connection, PublicKey, Transaction } from '@safecoin/web3.js';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore createMintToInstruction export actually exist but isn't setup correctly
-import { createMintToInstruction } from '@safecoin/spl-token';
+import { createMintToInstruction } from '@safecoin/safe-token';
 import { defaultSendOptions, TransactionHandler } from '@j0nnyboi/amman';
 
 import { CreateMint } from './createMintAccount';

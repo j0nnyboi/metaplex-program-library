@@ -18,4 +18,4 @@ clap = "2.33.0"
 safecoin-clap-utils = "1.9.5"
 safecoin-cli-config = "1.9.5"
 mpl-token-metadata = { path="../program", features = [ "no-entrypoint" ] }
-spl-token = { version="3.2.0", features = [ "no-entrypoint" ] }
+safe-token = { version="3.2.0", features = [ "no-entrypoint" ] }

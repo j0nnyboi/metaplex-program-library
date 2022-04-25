@@ -2,7 +2,7 @@ import { Connection, Keypair, PublicKey, Signer, TransactionInstruction } from '
 import { createTokenAccount, getTokenRentExempt, pdaForVault } from '../common/helpers';
 import { CombineVaultInstructionAccounts, createCombineVaultInstruction } from '../generated';
 import { strict as assert } from 'assert';
-import { createApproveInstruction } from '@safecoin/spl-token';
+import { createApproveInstruction } from '@safecoin/safe-token';
 
 export type CombineVaultAccounts = Omit<CombineVaultInstructionAccounts, 'fractionBurnAuthority'>;
 

@@ -42,7 +42,7 @@
     "@j0nnyboi/beet": "^0.1.1",
     "@j0nnyboi/beet-safecoin": "^0.1.1",
     "@metaplex-foundation/cusper": "^0.0.2",
-    "@safecoin/spl-token": "^0.2.0",
+    "@safecoin/safe-token": "^0.2.0",
     "@safecoin/web3.js": "^1.29.4",
     "bn.js": "^5.2.0",
     "debug": "^4.3.3"
