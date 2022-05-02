@@ -309,7 +309,7 @@ mod withdraw {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -396,7 +396,7 @@ mod withdraw {
             payout_ticket,
             rent: sysvar::rent::id(),
             clock: sysvar::clock::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             associated_token_program: spl_associated_token_account::id(),
             system_program: system_program::id(),
         }
@@ -439,7 +439,7 @@ mod withdraw {
             .unwrap()
             .unwrap();
         let destination_token_acc =
-            spl_token::state::Account::unpack(&destination_acc.data).unwrap();
+            safe_token::state::Account::unpack(&destination_acc.data).unwrap();
         assert_eq!(destination_token_acc.amount, 1000000);
     }
 
@@ -688,7 +688,7 @@ mod withdraw {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -772,7 +772,7 @@ mod withdraw {
             payout_ticket,
             rent: sysvar::rent::id(),
             clock: sysvar::clock::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             associated_token_program: spl_associated_token_account::id(),
             system_program: system_program::id(),
         }
@@ -1056,7 +1056,7 @@ mod withdraw {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1140,7 +1140,7 @@ mod withdraw {
             payout_ticket,
             rent: sysvar::rent::id(),
             clock: sysvar::clock::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             associated_token_program: spl_associated_token_account::id(),
             system_program: system_program::id(),
         }
@@ -1415,7 +1415,7 @@ mod withdraw {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1498,7 +1498,7 @@ mod withdraw {
             payout_ticket,
             rent: sysvar::rent::id(),
             clock: sysvar::clock::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             associated_token_program: spl_associated_token_account::id(),
             system_program: system_program::id(),
         }
@@ -1812,7 +1812,7 @@ mod withdraw {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1899,7 +1899,7 @@ mod withdraw {
             payout_ticket,
             rent: sysvar::rent::id(),
             clock: sysvar::clock::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             associated_token_program: spl_associated_token_account::id(),
             system_program: system_program::id(),
         }
@@ -1944,7 +1944,7 @@ mod withdraw {
             payout_ticket,
             rent: sysvar::rent::id(),
             clock: sysvar::clock::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             associated_token_program: spl_associated_token_account::id(),
             system_program: system_program::id(),
         }

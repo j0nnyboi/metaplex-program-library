@@ -21,7 +21,7 @@ use safecoin_program::{
     pubkey::Pubkey,
     sysvar::{rent::Rent, Sysvar},
 };
-use spl_token::state::Account;
+use safe_token::state::Account;
 
 /// Process AddVoucherToPack instruction
 pub fn add_voucher_to_pack(program_id: &Pubkey, accounts: &[AccountInfo]) -> ProgramResult {

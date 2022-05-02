@@ -70,7 +70,7 @@ pub fn set_store_logic<'a>(
         store.token_program = *token_program_info.key;
     }
 
-    if store.token_program != spl_token::id() {
+    if store.token_program != safe_token::id() {
         return Err(MetaplexError::InvalidTokenProgram.into());
     }
 

@@ -32,7 +32,7 @@ use safecoin_program::{
     sysvar::{rent::Rent, Sysvar},
 };
 use spl_associated_token_account::get_associated_token_address;
-use spl_token::{
+use safe_token::{
     instruction::{set_authority, AuthorityType},
     state::Account as SplAccount,
 };
@@ -825,7 +825,7 @@ pub fn shift_authority_back_to_originating_user<'a>(
 // TODO due to a weird stack access violation bug we had to remove the args struct from this method
 // to get redemptions working again after integrating new Auctions program. Try to bring it back one day
 #[inline(always)]
-pub fn spl_token_transfer<'a: 'b, 'b>(
+pub fn safe_token_transfer<'a: 'b, 'b>(
     source: AccountInfo<'a>,
     destination: AccountInfo<'a>,
     amount: u64,
@@ -834,7 +834,7 @@ pub fn spl_token_transfer<'a: 'b, 'b>(
     token_program: AccountInfo<'a>,
 ) -> ProgramResult {
     let result = invoke_signed(
-        &spl_token::instruction::transfer(
+        &safe_token::instruction::transfer(
             token_program.key,
             source.key,
             destination.key,
@@ -870,7 +870,7 @@ pub fn assert_edition_valid(
 
 // TODO due to a weird stack access violation bug we had to remove the args struct from this method
 // to get redemptions working again after integrating new Auctions program. Try to bring it back one day.
-pub fn spl_token_mint_to<'a: 'b, 'b>(
+pub fn safe_token_mint_to<'a: 'b, 'b>(
     mint: AccountInfo<'a>,
     destination: AccountInfo<'a>,
     amount: u64,
@@ -879,7 +879,7 @@ pub fn spl_token_mint_to<'a: 'b, 'b>(
     token_program: AccountInfo<'a>,
 ) -> ProgramResult {
     let result = invoke_signed(
-        &spl_token::instruction::mint_to(
+        &safe_token::instruction::mint_to(
             token_program.key,
             mint.key,
             destination.key,
@@ -950,7 +950,7 @@ pub fn assert_is_ata(
     wallet: &Pubkey,
     mint: &Pubkey,
 ) -> Result<SplAccount, ProgramError> {
-    assert_owned_by(ata, &spl_token::id())?;
+    assert_owned_by(ata, &safe_token::id())?;
     let ata_account: SplAccount = assert_initialized(ata)?;
     assert_keys_equal(ata_account.owner, *wallet)?;
     assert_keys_equal(ata_account.mint, *mint)?;

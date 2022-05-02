@@ -23,7 +23,7 @@ use safecoin_program::{
     system_instruction,
     sysvar::{rent::Rent, Sysvar},
 };
-use spl_token::{
+use safe_token::{
     instruction::{set_authority, AuthorityType},
     state::{Account, Mint},
 };
@@ -667,7 +667,7 @@ pub fn mint_limited_edition<'a>(
     Ok(())
 }
 
-pub fn spl_token_burn(params: TokenBurnParams<'_, '_>) -> ProgramResult {
+pub fn safe_token_burn(params: TokenBurnParams<'_, '_>) -> ProgramResult {
     let TokenBurnParams {
         mint,
         source,
@@ -681,7 +681,7 @@ pub fn spl_token_burn(params: TokenBurnParams<'_, '_>) -> ProgramResult {
         seeds.push(seed);
     }
     let result = invoke_signed(
-        &spl_token::instruction::burn(
+        &safe_token::instruction::burn(
             token_program.key,
             source.key,
             mint.key,
@@ -711,7 +711,7 @@ pub struct TokenBurnParams<'a: 'b, 'b> {
     pub token_program: AccountInfo<'a>,
 }
 
-pub fn spl_token_mint_to(params: TokenMintToParams<'_, '_>) -> ProgramResult {
+pub fn safe_token_mint_to(params: TokenMintToParams<'_, '_>) -> ProgramResult {
     let TokenMintToParams {
         mint,
         destination,
@@ -725,7 +725,7 @@ pub fn spl_token_mint_to(params: TokenMintToParams<'_, '_>) -> ProgramResult {
         seeds.push(seed);
     }
     let result = invoke_signed(
-        &spl_token::instruction::mint_to(
+        &safe_token::instruction::mint_to(
             token_program.key,
             mint.key,
             destination.key,
@@ -784,7 +784,7 @@ pub fn assert_owned_by(account: &AccountInfo, owner: &Pubkey) -> ProgramResult {
 }
 
 pub fn assert_token_program_matches_package(token_program_info: &AccountInfo) -> ProgramResult {
-    if *token_program_info.key != spl_token::id() {
+    if *token_program_info.key != safe_token::id() {
         return Err(MetadataError::InvalidTokenProgram.into());
     }
 
@@ -866,7 +866,7 @@ pub fn process_create_metadata_accounts_logic(
             }
         },
     )?;
-    assert_owned_by(mint_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
 
     let metadata_seeds = &[
         PREFIX.as_bytes(),
@@ -1017,8 +1017,8 @@ pub fn process_mint_new_edition_from_master_edition_via_token_logic<'a>(
     } = accounts;
 
     assert_token_program_matches_package(token_program_account_info)?;
-    assert_owned_by(mint_info, &spl_token::id())?;
-    assert_owned_by(token_account_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
+    assert_owned_by(token_account_info, &safe_token::id())?;
     assert_owned_by(master_edition_account_info, program_id)?;
     assert_owned_by(master_metadata_account_info, program_id)?;
 
@@ -1121,11 +1121,11 @@ pub fn assert_currently_holding(
     token_account_info: &AccountInfo,
 ) -> ProgramResult {
     assert_owned_by(metadata_info, program_id)?;
-    assert_owned_by(mint_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
 
     let token_account: Account = assert_initialized(token_account_info)?;
 
-    assert_owned_by(token_account_info, &spl_token::id())?;
+    assert_owned_by(token_account_info, &safe_token::id())?;
 
     if token_account.owner != *owner_info.key {
         return Err(MetadataError::InvalidOwner.into());
@@ -1167,11 +1167,11 @@ pub fn assert_delegated_tokens(
     mint_info: &AccountInfo,
     token_account_info: &AccountInfo,
 ) -> ProgramResult {
-    assert_owned_by(mint_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
 
     let token_account: Account = assert_initialized(token_account_info)?;
 
-    assert_owned_by(token_account_info, &spl_token::id())?;
+    assert_owned_by(token_account_info, &safe_token::id())?;
 
     if token_account.mint != *mint_info.key {
         return Err(MetadataError::MintMismatch.into());

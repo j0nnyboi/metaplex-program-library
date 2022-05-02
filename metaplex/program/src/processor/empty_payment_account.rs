@@ -9,7 +9,7 @@ use crate::{
     },
     utils::{
         assert_derivation, assert_initialized, assert_is_ata, assert_owned_by, assert_rent_exempt,
-        assert_safety_deposit_config_valid, create_or_allocate_account_raw, spl_token_transfer,
+        assert_safety_deposit_config_valid, create_or_allocate_account_raw, safe_token_transfer,
     },
 };
 use borsh::BorshSerialize;
@@ -25,7 +25,7 @@ use safecoin_program::{
     rent::Rent,
     sysvar::Sysvar,
 };
-use spl_token::state::Account;
+use safe_token::state::Account;
 
 fn assert_destination_ownership_validity(
     auction_manager: &Box<dyn AuctionManager>,
@@ -437,7 +437,7 @@ pub fn process_empty_payment_account(
 
         let authority_seeds = &[PREFIX.as_bytes(), auction_key.as_ref(), &[bump_seed]];
 
-        spl_token_transfer(
+        safe_token_transfer(
             accept_payment_info.clone(),
             destination_info.clone(),
             final_amount,

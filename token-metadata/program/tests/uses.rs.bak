@@ -19,7 +19,7 @@ mod uses {
     };
     use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
     use solana_sdk::signature::Keypair;
-    use spl_token::state::Account;
+    use safe_token::state::Account;
 
     use super::*;
 

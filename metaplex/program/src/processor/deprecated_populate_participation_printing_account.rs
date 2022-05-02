@@ -18,7 +18,7 @@ use safecoin_program::{
     program::invoke_signed,
     pubkey::Pubkey,
 };
-use spl_token::{instruction::close_account, state::Account};
+use safe_token::{instruction::close_account, state::Account};
 
 fn mint_printing_tokens<'a: 'b, 'b>(
     program: &AccountInfo<'a>,

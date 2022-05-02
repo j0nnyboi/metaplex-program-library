@@ -183,7 +183,7 @@ pub async fn setup_selling_resource(
         owner: vault_owner,
         resource_token: resource_token.pubkey(),
         rent: sysvar::rent::id(),
-        token_program: spl_token::id(),
+        token_program: safe_token::id(),
         system_program: system_program::id(),
     }
     .to_account_metas(None);

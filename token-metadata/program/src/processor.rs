@@ -26,7 +26,7 @@ use crate::{
         create_or_allocate_account_raw, get_owner_from_token_account,
         process_create_metadata_accounts_logic,
         process_mint_new_edition_from_master_edition_via_token_logic, puff_out_data_fields,
-        spl_token_burn, transfer_mint_authority, CreateMetadataAccountsLogicArgs,
+        safe_token_burn, transfer_mint_authority, CreateMetadataAccountsLogicArgs,
         MintNewEditionFromMasterEditionViaTokenLogicArgs, TokenBurnParams,
     },
 };
@@ -41,7 +41,7 @@ use safecoin_program::{
     program_error::ProgramError,
     pubkey::Pubkey,
 };
-use spl_token::{
+use safe_token::{
     instruction::{approve, freeze_account, revoke, thaw_account},
     state::{Account, Mint},
 };
@@ -320,7 +320,7 @@ pub fn process_update_primary_sale_happened_via_token(
     let mut metadata = Metadata::from_account_info(metadata_account_info)?;
 
     assert_owned_by(metadata_account_info, program_id)?;
-    assert_owned_by(token_account_info, &spl_token::id())?;
+    assert_owned_by(token_account_info, &safe_token::id())?;
 
     if !owner_info.is_signer {
         return Err(ProgramError::MissingRequiredSignature);
@@ -444,7 +444,7 @@ pub fn process_create_master_edition(
     assert_token_program_matches_package(token_program_info)?;
     assert_mint_authority_matches_mint(&mint.mint_authority, mint_authority_info)?;
     assert_owned_by(metadata_account_info, program_id)?;
-    assert_owned_by(mint_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
 
     if metadata.mint != *mint_info.key {
         return Err(MetadataError::MintMismatch.into());
@@ -559,8 +559,8 @@ pub fn process_convert_master_edition_v1_to_v2(
     let printing_mint_info = next_account_info(account_info_iter)?;
 
     assert_owned_by(master_edition_info, program_id)?;
-    assert_owned_by(one_time_printing_auth_mint_info, &spl_token::id())?;
-    assert_owned_by(printing_mint_info, &spl_token::id())?;
+    assert_owned_by(one_time_printing_auth_mint_info, &safe_token::id())?;
+    assert_owned_by(printing_mint_info, &safe_token::id())?;
     let master_edition: MasterEditionV1 = MasterEditionV1::from_account_info(master_edition_info)?;
     let printing_mint: Mint = assert_initialized(printing_mint_info)?;
     let auth_mint: Mint = assert_initialized(one_time_printing_auth_mint_info)?;
@@ -748,7 +748,7 @@ pub fn verify_collection(program_id: &Pubkey, accounts: &[AccountInfo]) -> Progr
 
     assert_owned_by(metadata_info, program_id)?;
     assert_owned_by(collection_info, program_id)?;
-    assert_owned_by(collection_mint, &spl_token::id())?;
+    assert_owned_by(collection_mint, &safe_token::id())?;
     assert_owned_by(edition_account_info, program_id)?;
 
     let mut metadata = Metadata::from_account_info(metadata_info)?;
@@ -795,7 +795,7 @@ pub fn unverify_collection(program_id: &Pubkey, accounts: &[AccountInfo]) -> Pro
     assert_signer(collection_authority_info)?;
     assert_owned_by(metadata_info, program_id)?;
     assert_owned_by(collection_info, program_id)?;
-    assert_owned_by(collection_mint, &spl_token::id())?;
+    assert_owned_by(collection_mint, &safe_token::id())?;
     assert_owned_by(edition_account_info, program_id)?;
 
     let mut metadata = Metadata::from_account_info(metadata_info)?;
@@ -850,7 +850,7 @@ pub fn process_approve_use_authority(
     if metadata.uses.is_none() {
         return Err(MetadataError::Unusable.into());
     }
-    if *token_program_account_info.key != spl_token::id() {
+    if *token_program_account_info.key != safe_token::id() {
         return Err(MetadataError::InvalidTokenProgram.into());
     }
     assert_signer(&owner_info)?;
@@ -936,7 +936,7 @@ pub fn process_revoke_use_authority(
     if metadata.uses.is_none() {
         return Err(MetadataError::Unusable.into());
     }
-    if *token_program_account_info.key != spl_token::id() {
+    if *token_program_account_info.key != safe_token::id() {
         return Err(MetadataError::InvalidTokenProgram.into());
     }
     assert_signer(&owner_info)?;
@@ -1009,7 +1009,7 @@ pub fn process_utilize(
     if metadata.uses.is_none() {
         return Err(MetadataError::Unusable.into());
     }
-    if *token_program_account_info.key != spl_token::id() {
+    if *token_program_account_info.key != safe_token::id() {
         return Err(MetadataError::InvalidTokenProgram.into());
     }
     assert_signer(&user_info)?;
@@ -1074,7 +1074,7 @@ pub fn process_utilize(
                 BURN.as_bytes(),
                 &[seed],
             ];
-            spl_token_burn(TokenBurnParams {
+            safe_token_burn(TokenBurnParams {
                 mint: mint_info.clone(),
                 amount: 1,
                 authority: burn_authority_info.clone(),
@@ -1083,7 +1083,7 @@ pub fn process_utilize(
                 authority_signer_seeds: Some(burn_bump_ref),
             })?;
         } else {
-            spl_token_burn(TokenBurnParams {
+            safe_token_burn(TokenBurnParams {
                 mint: mint_info.clone(),
                 amount: 1,
                 authority: owner_info.clone(),
@@ -1112,7 +1112,7 @@ pub fn process_approve_collection_authority(
 
     let metadata = Metadata::from_account_info(metadata_info)?;
     assert_owned_by(metadata_info, program_id)?;
-    assert_owned_by(mint_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
     assert_signer(&update_authority)?;
     assert_signer(&payer)?;
     if metadata.update_authority != *update_authority.key {
@@ -1168,7 +1168,7 @@ pub fn process_revoke_collection_authority(
     let mint_info = next_account_info(account_info_iter)?;
     let metadata = Metadata::from_account_info(metadata_info)?;
     assert_owned_by(metadata_info, program_id)?;
-    assert_owned_by(mint_info, &spl_token::id())?;
+    assert_owned_by(mint_info, &safe_token::id())?;
     assert_signer(&update_authority)?;
     if metadata.update_authority != *update_authority.key {
         return Err(MetadataError::UpdateAuthorityIncorrect.into());
@@ -1216,7 +1216,7 @@ pub fn set_and_verify_collection(program_id: &Pubkey, accounts: &[AccountInfo]) 
 
     assert_owned_by(metadata_info, program_id)?;
     assert_owned_by(collection_info, program_id)?;
-    assert_owned_by(collection_mint, &spl_token::id())?;
+    assert_owned_by(collection_mint, &safe_token::id())?;
     assert_owned_by(edition_account_info, program_id)?;
 
     let mut metadata = Metadata::from_account_info(metadata_info)?;
@@ -1268,7 +1268,7 @@ pub fn process_freeze_delegated_account(
     let mint_info = next_account_info(account_info_iter)?;
     let token_program_account_info = next_account_info(account_info_iter)?;
 
-    if *token_program_account_info.key != spl_token::id() {
+    if *token_program_account_info.key != safe_token::id() {
         return Err(MetadataError::InvalidTokenProgram.into());
     }
 
@@ -1323,7 +1323,7 @@ pub fn process_thaw_delegated_account(
     let edition_info = next_account_info(account_info_iter)?;
     let mint_info = next_account_info(account_info_iter)?;
     let token_program_account_info = next_account_info(account_info_iter)?;
-    if *token_program_account_info.key != spl_token::id() {
+    if *token_program_account_info.key != safe_token::id() {
         return Err(MetadataError::InvalidTokenProgram.into());
     }
 

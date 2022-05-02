@@ -52,7 +52,7 @@ mod freeze_delegated {
             .await
             .unwrap();
 
-        let approve_ix = spl_token::instruction::approve(&spl_token::id(), &test_metadata.token.pubkey(), &delegate.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
+        let approve_ix = safe_token::instruction::approve(&safe_token::id(), &test_metadata.token.pubkey(), &delegate.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
         let approve_tx = Transaction::new_signed_with_payer(
             &[approve_ix],
             Some(&context.payer.pubkey()),
@@ -85,7 +85,7 @@ mod freeze_delegated {
             .unwrap();
 
         // transfer fails because frozen
-        let transfer_ix = spl_token::instruction::transfer(&spl_token::id(), &test_metadata.token.pubkey(), &test_metadata.token.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
+        let transfer_ix = safe_token::instruction::transfer(&safe_token::id(), &test_metadata.token.pubkey(), &test_metadata.token.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
         let transfer_tx = Transaction::new_signed_with_payer(
             &[transfer_ix],
             Some(&context.payer.pubkey()),
@@ -98,7 +98,7 @@ mod freeze_delegated {
             .await
             .unwrap_err();
 
-        assert_custom_error!(err, spl_token::error::TokenError::AccountFrozen);
+        assert_custom_error!(err, safe_token::error::TokenError::AccountFrozen);
     }
 
 
@@ -129,7 +129,7 @@ mod freeze_delegated {
 
 
         // delegate token to delegate
-        spl_token::instruction::approve(&spl_token::id(), &test_metadata.token.pubkey(), &delegate.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
+        safe_token::instruction::approve(&safe_token::id(), &test_metadata.token.pubkey(), &delegate.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
 
         // delegate freezes token
         let freeze_ix = mpl_token_metadata::instruction::freeze_delegated_account(
@@ -246,7 +246,7 @@ mod freeze_delegated {
             .unwrap();
 
         // delegate token to delegate
-        spl_token::instruction::approve(&spl_token::id(), &test_metadata.token.pubkey(), &delegate.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
+        safe_token::instruction::approve(&safe_token::id(), &test_metadata.token.pubkey(), &delegate.pubkey(), &context.payer.pubkey(), &[], 1).unwrap();
 
         // delegate freezes token
         let freeze_ix = mpl_token_metadata::instruction::freeze_delegated_account(

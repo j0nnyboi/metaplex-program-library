@@ -18,7 +18,7 @@ mod approve_use_authority {
 
     use mpl_token_metadata::{pda::find_program_as_burner_account, state::Key};
     use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
-    use spl_token::state::Account;
+    use safe_token::state::Account;
 
     use super::*;
     #[tokio::test]

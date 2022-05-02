@@ -18,7 +18,7 @@ use safecoin_program::{
     entrypoint::ProgramResult,
     pubkey::Pubkey,
 };
-use spl_token::state::Account;
+use safe_token::state::Account;
 pub fn make_safety_deposit_validation<'a>(
     program_id: &Pubkey,
     auction_manager_info: &AccountInfo<'a>,

@@ -28,7 +28,7 @@ use {
         system_instruction::create_account,
         transaction::Transaction,
     },
-    spl_token::{
+    safe_token::{
         instruction::{initialize_account, initialize_mint, mint_to},
         state::{Account, Mint},
     },
@@ -583,7 +583,7 @@ fn create_metadata_account_call(
         let mint_account = client
             .get_account(&mint_key)
             .expect("Could not find mint account.");
-        let mint = spl_token::state::Mint::unpack(mint_account.data())
+        let mint = safe_token::state::Mint::unpack(mint_account.data())
             .expect("Failed to deserialize Mint account.");
         mint.mint_authority.expect("Mint has no mint authority.")
     };

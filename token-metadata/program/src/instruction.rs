@@ -596,7 +596,7 @@ pub fn create_master_edition(
         AccountMeta::new_readonly(mint_authority, true),
         AccountMeta::new(payer, true),
         AccountMeta::new_readonly(metadata, false),
-        AccountMeta::new_readonly(spl_token::id(), false),
+        AccountMeta::new_readonly(safe_token::id(), false),
         AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
@@ -629,7 +629,7 @@ pub fn create_master_edition_v3(
         AccountMeta::new_readonly(mint_authority, true),
         AccountMeta::new(payer, true),
         AccountMeta::new(metadata, false),
-        AccountMeta::new_readonly(spl_token::id(), false),
+        AccountMeta::new_readonly(safe_token::id(), false),
         AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
@@ -685,7 +685,7 @@ pub fn mint_new_edition_from_master_edition_via_token(
         AccountMeta::new_readonly(token_account, false),
         AccountMeta::new_readonly(new_metadata_update_authority, false),
         AccountMeta::new_readonly(metadata, false),
-        AccountMeta::new_readonly(spl_token::id(), false),
+        AccountMeta::new_readonly(safe_token::id(), false),
         AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
     ];
@@ -932,7 +932,7 @@ pub fn utilize(
         AccountMeta::new(mint, false),
         AccountMeta::new(use_authority, true),
         AccountMeta::new_readonly(owner, false),
-        AccountMeta::new_readonly(spl_token::id(), false),
+        AccountMeta::new_readonly(safe_token::id(), false),
         AccountMeta::new_readonly(spl_associated_token_account::id(), false),
         AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
@@ -998,7 +998,7 @@ pub fn approve_use_authority(
             AccountMeta::new_readonly(metadata, false),
             AccountMeta::new_readonly(mint, false),
             AccountMeta::new_readonly(burner, false),
-            AccountMeta::new_readonly(spl_token::id(), false),
+            AccountMeta::new_readonly(safe_token::id(), false),
             AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
@@ -1043,7 +1043,7 @@ pub fn revoke_use_authority(
             AccountMeta::new(owner_token_account, false),
             AccountMeta::new_readonly(mint, false),
             AccountMeta::new_readonly(metadata, false),
-            AccountMeta::new_readonly(spl_token::id(), false),
+            AccountMeta::new_readonly(safe_token::id(), false),
             AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ],
@@ -1204,7 +1204,7 @@ pub fn freeze_delegated_account(
             AccountMeta::new(token_account, false),
             AccountMeta::new_readonly(edition, false),
             AccountMeta::new_readonly(mint, false),
-            AccountMeta::new_readonly(spl_token::id(), false),
+            AccountMeta::new_readonly(safe_token::id(), false),
         ],
         data: MetadataInstruction::FreezeDelegatedAccount
             .try_to_vec()
@@ -1236,7 +1236,7 @@ pub fn thaw_delegated_account(
             AccountMeta::new(token_account, false),
             AccountMeta::new_readonly(edition, false),
             AccountMeta::new_readonly(mint, false),
-            AccountMeta::new_readonly(spl_token::id(), false),
+            AccountMeta::new_readonly(safe_token::id(), false),
         ],
         data: MetadataInstruction::ThawDelegatedAccount
             .try_to_vec()

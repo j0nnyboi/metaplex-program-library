@@ -18,7 +18,7 @@ use safecoin_program::{
     program_option::COption,
     pubkey::Pubkey,
 };
-use spl_token::state::Account;
+use safe_token::state::Account;
 
 pub fn assert_common_checks(
     program_id: &Pubkey,

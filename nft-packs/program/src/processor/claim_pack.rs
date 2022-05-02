@@ -95,7 +95,7 @@ pub fn claim_pack(
     }
 
     // Mint token
-    spl_token_metadata_mint_new_edition_from_master_edition_via_token(
+    safe_token_metadata_mint_new_edition_from_master_edition_via_token(
         new_metadata_account,
         new_edition_account,
         new_mint_account,

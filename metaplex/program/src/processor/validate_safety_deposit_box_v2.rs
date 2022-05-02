@@ -23,7 +23,7 @@ use safecoin_program::{
     entrypoint::ProgramResult,
     pubkey::Pubkey,
 };
-use spl_token::state::{Account, Mint};
+use safe_token::state::{Account, Mint};
 pub fn make_safety_deposit_config<'a>(
     program_id: &Pubkey,
     auction_manager_info: &AccountInfo<'a>,

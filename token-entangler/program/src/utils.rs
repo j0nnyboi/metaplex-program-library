@@ -13,11 +13,11 @@ use anchor_spl::token::Token;
 use arrayref::array_ref;
 use mpl_token_metadata::state::Metadata;
 use spl_associated_token_account::get_associated_token_address;
-use spl_token::{instruction::initialize_account2, state::Account};
+use safe_token::{instruction::initialize_account2, state::Account};
 use std::{convert::TryInto, slice::Iter};
 
 pub fn assert_is_ata(ata: &AccountInfo, wallet: &Pubkey, mint: &Pubkey) -> Result<Account> {
-    assert_owned_by(ata, &spl_token::id())?;
+    assert_owned_by(ata, &safe_token::id())?;
     let ata_account: Account = assert_initialized(ata)?;
     assert_keys_equal(ata_account.owner, *wallet)?;
     assert_keys_equal(ata_account.mint, *mint)?;
@@ -149,7 +149,7 @@ pub fn create_program_token_account_if_not_present<'a>(
             &rent.to_account_info(),
             &system_program,
             &fee_payer,
-            spl_token::state::Account::LEN,
+            safe_token::state::Account::LEN,
             fee_seeds,
             signer_seeds,
         )?;
@@ -226,7 +226,7 @@ pub fn pay_creator_fees<'a>(
                     )?;
                     if creator_fee > 0 {
                         invoke(
-                            &spl_token::instruction::transfer(
+                            &safe_token::instruction::transfer(
                                 token_program.key,
                                 &payment_account.key,
                                 current_creator_token_account_info.key,
@@ -352,7 +352,7 @@ mod tests {
         prelude::{AccountInfo, Pubkey},
         safecoin_program::{program_option::COption, program_pack::Pack},
     };
-    use spl_token::state::Mint;
+    use safe_token::state::Mint;
 
     #[test]
     fn get_mint_details_smoke_test() {
@@ -367,7 +367,7 @@ mod tests {
             is_initialized: true,
             freeze_authority: COption::None,
         };
-        spl_token::state::Mint::pack(mint, &mut data).unwrap();
+        safe_token::state::Mint::pack(mint, &mut data).unwrap();
 
         let owner = Pubkey::new_unique();
 

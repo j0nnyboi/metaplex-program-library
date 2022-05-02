@@ -19,7 +19,7 @@ use safecoin_program::{
     rent::Rent,
     sysvar::Sysvar,
 };
-use spl_token::state::Account;
+use safe_token::state::Account;
 
 pub fn process_deprecated_validate_participation(
     program_id: &Pubkey,

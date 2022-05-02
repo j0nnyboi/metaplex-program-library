@@ -1261,11 +1261,11 @@ async fn fail_wrong_user_wallet() {
     .unwrap();
 
     let mint_key = new_mint.pubkey();
-    let spl_token_metadata_key = mpl_token_metadata::id();
+    let safe_token_metadata_key = mpl_token_metadata::id();
 
     let metadata_seeds = &[
         mpl_token_metadata::state::PREFIX.as_bytes(),
-        spl_token_metadata_key.as_ref(),
+        safe_token_metadata_key.as_ref(),
         mint_key.as_ref(),
     ];
     let (new_metadata_pubkey, _) =
@@ -1273,7 +1273,7 @@ async fn fail_wrong_user_wallet() {
 
     let master_edition_seeds = &[
         mpl_token_metadata::state::PREFIX.as_bytes(),
-        spl_token_metadata_key.as_ref(),
+        safe_token_metadata_key.as_ref(),
         mint_key.as_ref(),
         mpl_token_metadata::state::EDITION.as_bytes(),
     ];
@@ -1327,7 +1327,7 @@ async fn fail_wrong_user_wallet() {
         AccountMeta::new(edition_mark_pda, false),
         AccountMeta::new_readonly(sysvar::rent::id(), false),
         AccountMeta::new_readonly(mpl_token_metadata::id(), false),
-        AccountMeta::new_readonly(spl_token::id(), false),
+        AccountMeta::new_readonly(safe_token::id(), false),
         AccountMeta::new_readonly(system_program::id(), false),
         AccountMeta::new_readonly(sysvar::clock::id(), false),
     ];
@@ -1497,11 +1497,11 @@ async fn fail_claim_twice() {
     context.warp_to_slot(5).unwrap();
 
     let mint_key = new_mint.pubkey();
-    let spl_token_metadata_key = mpl_token_metadata::id();
+    let safe_token_metadata_key = mpl_token_metadata::id();
 
     let metadata_seeds = &[
         mpl_token_metadata::state::PREFIX.as_bytes(),
-        spl_token_metadata_key.as_ref(),
+        safe_token_metadata_key.as_ref(),
         mint_key.as_ref(),
     ];
     let (new_metadata_pubkey, _) =
@@ -1509,7 +1509,7 @@ async fn fail_claim_twice() {
 
     let master_edition_seeds = &[
         mpl_token_metadata::state::PREFIX.as_bytes(),
-        spl_token_metadata_key.as_ref(),
+        safe_token_metadata_key.as_ref(),
         mint_key.as_ref(),
         mpl_token_metadata::state::EDITION.as_bytes(),
     ];
