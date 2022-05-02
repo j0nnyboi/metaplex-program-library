@@ -4,7 +4,7 @@ use safecoin_program::sysvar::{instructions::get_instruction_relative, SysvarId}
 use {
     crate::utils::{
         assert_initialized, assert_is_ata, assert_keys_equal, assert_owned_by,
-        assert_valid_go_live, spl_token_burn, spl_token_transfer, TokenBurnParams,
+        assert_valid_go_live, safe_token_burn, safe_token_transfer, TokenBurnParams,
         TokenTransferParams,
     },
     anchor_lang::{
@@ -31,7 +31,7 @@ use {
         },
         utils::{assert_derivation, create_or_allocate_account_raw},
     },
-    spl_token::state::Mint,
+    safe_token::state::Mint,
     std::{cell::RefMut, ops::Deref, str::FromStr},
 };
 anchor_lang::declare_id!("cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ");
@@ -176,7 +176,7 @@ pub mod candy_machine {
 
                             assert_keys_equal(whitelist_token_mint.key(), ws.mint)?;
 
-                            spl_token_burn(TokenBurnParams {
+                            safe_token_burn(TokenBurnParams {
                                 mint: whitelist_token_mint.clone(),
                                 source: whitelist_token_account.clone(),
                                 amount: 1,
@@ -253,7 +253,7 @@ pub mod candy_machine {
                 return Err(ErrorCode::NotEnoughTokens.into());
             }
 
-            spl_token_transfer(TokenTransferParams {
+            safe_token_transfer(TokenTransferParams {
                 source: token_account_info.clone(),
                 destination: wallet.to_account_info(),
                 authority: transfer_authority_info.clone(),
@@ -416,7 +416,7 @@ pub mod candy_machine {
             let program_id = read_pubkey(&mut current, &instruction_sysvar).unwrap();
 
             if program_id != candy_machine::id()
-                && program_id != spl_token::id()
+                && program_id != safe_token::id()
                 && program_id != anchor_lang::safecoin_program::system_program::ID
                 && program_id != associated_token
             {
@@ -650,11 +650,11 @@ pub mod candy_machine {
         if ctx.remaining_accounts.len() > 0 {
             let token_mint_info = &ctx.remaining_accounts[0];
             let _token_mint: Mint = assert_initialized(&token_mint_info)?;
-            let token_account: spl_token::state::Account =
+            let token_account: safe_token::state::Account =
                 assert_initialized(&ctx.accounts.wallet)?;
 
-            assert_owned_by(&token_mint_info, &spl_token::id())?;
-            assert_owned_by(&ctx.accounts.wallet, &spl_token::id())?;
+            assert_owned_by(&token_mint_info, &safe_token::id())?;
+            assert_owned_by(&ctx.accounts.wallet, &safe_token::id())?;
 
             if token_account.mint != token_mint_info.key() {
                 return Err(ErrorCode::MintMismatch.into());

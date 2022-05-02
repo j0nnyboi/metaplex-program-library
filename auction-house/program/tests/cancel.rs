@@ -16,7 +16,7 @@ use safecoin_sdk::{
 };
 
 use spl_associated_token_account::get_associated_token_address;
-use spl_token;
+use safe_token;
 
 use crate::utils::setup_functions::buy;
 use utils::setup_functions::{
@@ -66,7 +66,7 @@ async fn cancel_listing() {
         token_account: token,
         authority: ah.authority,
         trade_state: acc.seller_trade_state,
-        token_program: spl_token::id(),
+        token_program: safe_token::id(),
         token_mint: test_metadata.mint.pubkey(),
         auction_house_fee_account: ah.auction_house_fee_account,
     }
@@ -176,7 +176,7 @@ async fn cancel_bid() {
         token_account: acc.token_account,
         authority: ah.authority,
         trade_state: acc.buyer_trade_state,
-        token_program: spl_token::id(),
+        token_program: safe_token::id(),
         token_mint: test_metadata.mint.pubkey(),
         auction_house_fee_account: ah.auction_house_fee_account,
     }

@@ -162,11 +162,11 @@ impl<'info> Withdraw<'info> {
                 signer_seeds[0],
             )?;
         } else {
-            if *treasury_mint.owner != spl_token::id() {
+            if *treasury_mint.owner != safe_token::id() {
                 return Err(ProgramError::InvalidArgument.into());
             }
 
-            if *treasury_holder.owner != spl_token::id() {
+            if *treasury_holder.owner != safe_token::id() {
                 return Err(ProgramError::InvalidArgument.into());
             }
 

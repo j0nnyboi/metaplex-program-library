@@ -102,7 +102,7 @@ pub fn withdraw(
             clock: clock::id(),
             rent: rent::id(),
             associated_token_program: spl_associated_token_account::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);

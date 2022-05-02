@@ -62,7 +62,7 @@ pub fn claim_resource(
         vault: selling_resource_state.vault,
         token_metadata_program: mpl_token_metadata::id(),
         clock: clock::id(),
-        token_program: spl_token::id(),
+        token_program: safe_token::id(),
         system_program: system_program::id(),
     }
     .to_account_metas(None);

@@ -38,7 +38,7 @@
 //         let new_authority = Keypair::new().pubkey();
 
 //         // Treasury mint key
-//         let t_mint_key = spl_token::native_mint::id();
+//         let t_mint_key = safe_token::native_mint::id();
 
 //         let auction_house_key = setup_auction_house(&program, &authority, &t_mint_key).unwrap();
 
@@ -60,7 +60,7 @@
 //                 treasury_withdrawal_destination: tdw_ata,
 //                 treasury_withdrawal_destination_owner: twd_key,
 //                 auction_house: auction_house_key,
-//                 token_program: spl_token::id(),
+//                 token_program: safe_token::id(),
 //                 system_program: system_program::id(),
 //                 ata_program: spl_associated_token_account::id(),
 //                 rent: sysvar::rent::id(),

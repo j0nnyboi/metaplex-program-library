@@ -275,7 +275,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -532,7 +532,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -819,7 +819,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1096,7 +1096,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1396,7 +1396,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1696,7 +1696,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -1971,7 +1971,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -2258,7 +2258,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -2372,7 +2372,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -2637,7 +2637,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -2715,7 +2715,7 @@ mod buy {
             .unwrap()
             .data;
         let deserialized_token_acc_data =
-            spl_token::state::Account::unpack_from_slice(user_collection_token_acc_data.as_ref())
+            safe_token::state::Account::unpack_from_slice(user_collection_token_acc_data.as_ref())
                 .unwrap();
 
         assert_eq!(deserialized_token_acc_data.amount, 0);
@@ -2949,7 +2949,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);
@@ -3027,7 +3027,7 @@ mod buy {
             .unwrap()
             .data;
         let deserialized_token_acc_data =
-            spl_token::state::Account::unpack_from_slice(user_collection_token_acc_data.as_ref())
+            safe_token::state::Account::unpack_from_slice(user_collection_token_acc_data.as_ref())
                 .unwrap();
 
         assert_eq!(deserialized_token_acc_data.amount, 1);
@@ -3261,7 +3261,7 @@ mod buy {
             clock: sysvar::clock::id(),
             rent: sysvar::rent::id(),
             token_metadata_program: mpl_token_metadata::id(),
-            token_program: spl_token::id(),
+            token_program: safe_token::id(),
             system_program: system_program::id(),
         }
         .to_account_metas(None);

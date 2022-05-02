@@ -21,7 +21,7 @@ use anchor_spl::{
     token::{Mint, Token, TokenAccount},
 };
 use safecoin_program::program_memory::sol_memset;
-use spl_token::instruction::{approve, revoke};
+use safe_token::instruction::{approve, revoke};
 anchor_lang::declare_id!("hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk");
 
 #[program]
@@ -75,7 +75,7 @@ pub mod auction_house {
         let token_program = &ctx.accounts.token_program;
         let system_program = &ctx.accounts.system_program;
 
-        let is_native = treasury_mint.key() == spl_token::native_mint::id();
+        let is_native = treasury_mint.key() == safe_token::native_mint::id();
         let auction_house_seeds = [
             PREFIX.as_bytes(),
             auction_house.creator.as_ref(),
@@ -92,7 +92,7 @@ pub mod auction_house {
         ];
         if !is_native {
             invoke_signed(
-                &spl_token::instruction::transfer(
+                &safe_token::instruction::transfer(
                     token_program.key,
                     &auction_house_treasury.key(),
                     &treasury_withdrawal_destination.key(),
@@ -146,7 +146,7 @@ pub mod auction_house {
         let system_program = &ctx.accounts.system_program;
         let ata_program = &ctx.accounts.ata_program;
         let rent = &ctx.accounts.rent;
-        let is_native = treasury_mint.key() == spl_token::native_mint::id();
+        let is_native = treasury_mint.key() == safe_token::native_mint::id();
 
         if let Some(sfbp) = seller_fee_basis_points {
             if sfbp > 10000 {
@@ -239,7 +239,7 @@ pub mod auction_house {
         auction_house.treasury_withdrawal_destination = treasury_withdrawal_destination.key();
         auction_house.fee_withdrawal_destination = fee_withdrawal_destination.key();
 
-        let is_native = treasury_mint.key() == spl_token::native_mint::id();
+        let is_native = treasury_mint.key() == safe_token::native_mint::id();
 
         let ah_key = auction_house.key();
 
@@ -348,7 +348,7 @@ pub mod auction_house {
             &seeds,
         )?;
 
-        let is_native = treasury_mint.key() == spl_token::native_mint::id();
+        let is_native = treasury_mint.key() == safe_token::native_mint::id();
 
         if !is_native {
             if receipt_account.data_is_empty() {
@@ -378,7 +378,7 @@ pub mod auction_house {
 
             assert_is_ata(receipt_account, &wallet.key(), &treasury_mint.key())?;
             invoke_signed(
-                &spl_token::instruction::transfer(
+                &safe_token::instruction::transfer(
                     token_program.key,
                     &escrow_payment_account.key(),
                     &receipt_account.key(),
@@ -459,7 +459,7 @@ pub mod auction_house {
             &seeds,
         )?;
 
-        let is_native = treasury_mint.key() == spl_token::native_mint::id();
+        let is_native = treasury_mint.key() == safe_token::native_mint::id();
 
         create_program_token_account_if_not_present(
             escrow_payment_account,
@@ -477,7 +477,7 @@ pub mod auction_house {
         if !is_native {
             assert_is_ata(payment_account, &wallet.key(), &treasury_mint.key())?;
             invoke(
-                &spl_token::instruction::transfer(
+                &safe_token::instruction::transfer(
                     token_program.key,
                     &payment_account.key(),
                     &escrow_payment_account.key(),
@@ -632,7 +632,7 @@ pub mod auction_house {
         let buyer_receipt_clone = buyer_receipt_token_account.to_account_info();
         let token_account_clone = token_account.to_account_info();
 
-        let is_native = treasury_mint.key() == spl_token::native_mint::id();
+        let is_native = treasury_mint.key() == safe_token::native_mint::id();
 
         if buyer_price == 0 && !authority_clone.is_signer && !seller.is_signer {
             return Err(ErrorCode::CannotMatchFreeSalesWithoutAuctionHouseOrSellerSignoff.into());
@@ -786,7 +786,7 @@ pub mod auction_house {
             }
 
             invoke_signed(
-                &spl_token::instruction::transfer(
+                &safe_token::instruction::transfer(
                     token_program.key,
                     &escrow_payment_account.key(),
                     &seller_payment_receipt_account.key(),
@@ -851,7 +851,7 @@ pub mod auction_house {
         ];
 
         invoke_signed(
-            &spl_token::instruction::transfer(
+            &safe_token::instruction::transfer(
                 token_program.key,
                 &token_account.key(),
                 &buyer_receipt_token_account.key(),

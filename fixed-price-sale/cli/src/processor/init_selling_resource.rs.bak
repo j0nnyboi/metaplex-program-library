@@ -77,7 +77,7 @@ pub fn init_selling_resource(
         owner: vault_owner,
         resource_token: *resource_token,
         rent: rent::id(),
-        token_program: spl_token::id(),
+        token_program: safe_token::id(),
         system_program: system_program::id(),
     }
     .to_account_metas(None);

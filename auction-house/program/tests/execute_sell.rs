@@ -18,7 +18,7 @@ use mpl_auction_house::{
 };
 use safecoin_sdk::{signature::Keypair, transaction::Transaction};
 use spl_associated_token_account::get_associated_token_address;
-use spl_token::state::Account;
+use safe_token::state::Account;
 use utils::setup_functions::*;
 
 #[tokio::test]
@@ -80,7 +80,7 @@ async fn execute_sale_success() {
         authority: ah.authority,
         seller_trade_state: sell_acc.seller_trade_state,
         buyer_trade_state: bid_acc.buyer_trade_state,
-        token_program: spl_token::id(),
+        token_program: safe_token::id(),
         free_trade_state: sell_acc.free_seller_trade_state,
         seller_payment_receipt_account: test_metadata.token.pubkey(),
         buyer_receipt_token_account: buyer_token_account,
