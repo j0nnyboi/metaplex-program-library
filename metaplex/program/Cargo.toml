@@ -16,17 +16,15 @@ mpl-auction = { path = "../../auction/program", features = [ "no-entrypoint" ]}
 num-derive = "~0.3"
 num-traits = "~0.2"
 arrayref = "~0.3.6"
-safecoin-program = "~1.8.12
-safe-token = { features = [ "no-entrypoint" ],path = "../../../safecoin-program-lib/libraries/safe-token/program }
+safecoin-program = "~1.8.12"
+safe-token = { features = [ "no-entrypoint" ],path = "../../../safecoin-program-library/token/program"}
 thiserror = "~1.0"
 borsh = "~0.9.1"
-safe-associated-token-account = {path = "../../../safecoin-program-lib/libraries/safe-associated-token-account/program"}
+safe-associated-token-account = {path = "../../../safecoin-program-library/associated-token-account/program"}
 
 [dev-dependencies]
-safecoin-sdk = "~1.9.5"
+safecoin-sdk = "~1.8.12"
 safecoin-program-test = "~1.8.12"
-
-
 
 [lib]
 crate-type = ["cdylib", "lib"]

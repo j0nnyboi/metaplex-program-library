@@ -14,14 +14,14 @@ crate-type = ["lib"]
 path = "src/lib.rs"
 
 [dependencies]
-anchor-client = {path = "../../../anchor/client"}
+anchor-client = {path = "../../../../anchor/client"}
 shellexpand = "~2.1.0"
 serde_json = "~1.0"
 safecoin-program-test = "~1.8.12"
 safecoin-program = "~1.8.12"
-safecoin-sdk = "~1.9.15" 
-safe-token = {features = ["no-entrypoint"],path = "../../../safecoin-program-lib/libraries/safe-token/program" }
-safe-associated-token-account = {features = ["no-entrypoint"] ,path = "../../../safecoin-program-lib/libraries/safe-associated-token-account/program"}
+safecoin-sdk = "~1.8.12" 
+safe-token = {features = ["no-entrypoint"],path = "../../../../safecoin-program-library/token/program" }
+safe-associated-token-account = {features = ["no-entrypoint"] ,path = "../../../../safecoin-program-library/associated-token-account/program"}
 mpl-token-vault = { path = "../../../token-vault/program", features = [ "no-entrypoint" ] }
 rand = "~0.7.3"
 num = "~0.4"

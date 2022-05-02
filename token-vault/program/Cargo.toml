@@ -15,7 +15,7 @@ test-bpf = []
 num-derive = "~0.3"
 num-traits = "~0.2"
 safecoin-program = "~1.8.12"
-safe-token = { features = [ "no-entrypoint" ],path = "../../../safecoin-program-lib/libraries/safe-token/program }
+safe-token = { features = [ "no-entrypoint" ],path = "../../../safecoin-program-library/token/program" }
 shank="~0.0.1"
 thiserror = "~1.0"
 borsh = "~0.9.1"

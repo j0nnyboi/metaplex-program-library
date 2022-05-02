@@ -15,7 +15,7 @@ num_enum = "~0.5.4"
 safecoin-program = "~1.8.12"
 thiserror = "~1.0"
 borsh = "~0.9.1"
-spl-math = { version = "~0.1.0", features = [ "no-entrypoint" ], path = "../../../safecoin-program-lib/libraries/math"}
+spl-math = { version = "~0.1.0", features = [ "no-entrypoint" ], path = "../../../safecoin-program-library/libraries/math"}
 safe-token = { version="~3.2.2", features = [ "no-entrypoint" ] }
 mpl-metaplex = { path = "../../metaplex/program", features = ["no-entrypoint"] }
 mpl-token-metadata = { version="~1.1.0", features = [ "no-entrypoint" ] }
