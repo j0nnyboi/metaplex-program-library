@@ -34,7 +34,7 @@ use {
     safe_token::state::Mint,
     std::{cell::RefMut, ops::Deref, str::FromStr},
 };
-anchor_lang::declare_id!("cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ");
+anchor_lang::declare_id!("KMQvpFxDaFt58rsPeLc1kPSYbdAHUrpETiBiNUb8SGT");
 const EXPIRE_OFFSET: i64 = 10 * 60;
 const PREFIX: &str = "candy_machine";
 // here just in case solana removes the var

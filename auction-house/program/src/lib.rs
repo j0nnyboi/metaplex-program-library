@@ -22,7 +22,7 @@ use anchor_spl::{
 };
 use safecoin_program::program_memory::sol_memset;
 use safe_token::instruction::{approve, revoke};
-anchor_lang::declare_id!("hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk");
+anchor_lang::declare_id!("Co8pmAyxUyCwep4zhnPWzkL6fwvPPHU59r1t5eM6gXjZ");
 
 #[program]
 pub mod auction_house {

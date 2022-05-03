@@ -1,4 +1,4 @@
-use solana_client::rpc_request::TokenAccountsFilter;
+use safecoin_client::rpc_request::TokenAccountsFilter;
 use safecoin_sdk::account::ReadableAccount;
 
 use {
@@ -14,11 +14,11 @@ use {
             EDITION, MAX_NAME_LENGTH, MAX_SYMBOL_LENGTH, MAX_URI_LENGTH, PREFIX,
         },
     },
-    solana_clap_utils::{
+    safecoin_clap_utils::{
         input_parsers::pubkey_of,
         input_validators::{is_url, is_valid_pubkey, is_valid_signer},
     },
-    solana_client::rpc_client::RpcClient,
+    safecoin_client::rpc_client::RpcClient,
     safecoin_program::{
         account_info::AccountInfo, borsh::try_from_slice_unchecked, program_pack::Pack,
     },
@@ -35,7 +35,7 @@ use {
     std::str::FromStr,
 };
 
-const TOKEN_PROGRAM_PUBKEY: &str = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA";
+const TOKEN_PROGRAM_PUBKEY: &str = "ToKLx75MGim1d1jRusuVX8xvdvvbSDESVaNXpRA9PHN";
 fn puff_unpuffed_metadata(_app_matches: &ArgMatches, payer: Keypair, client: RpcClient) {
     let metadata_accounts = client
         .get_program_accounts(&mpl_token_metadata::id())
