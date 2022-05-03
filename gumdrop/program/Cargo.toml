@@ -20,6 +20,6 @@ default = []
 [dependencies]
 anchor-lang = {path = "../../../anchor/lang"}
 anchor-spl = {path = "../../../anchor/spl"}
-safecoin-program = "~1.8.12"
+safecoin-program = {path = "../../../Safecoin/sdk/program"}
 safe-associated-token-account = { features = [ "no-entrypoint" ] ,path = "../../../safecoin-program-library/associated-token-account/program"}
 mpl-token-metadata = { features = [ "no-entrypoint" ], path="../../token-metadata/program"}

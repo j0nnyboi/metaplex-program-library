@@ -16,7 +16,7 @@ borsh = "~0.9.1"
 num-derive = "~0.3"
 num-traits = "~0.2"
 arrayref = "~0.3.6"
-safecoin-program = "~1.8.12"
+safecoin-program = {path = "../../../Safecoin/sdk/program"}
 safe-token = { features = [ "no-entrypoint" ],path = "../../../safecoin-program-library/token/program" }
 thiserror = "~1.0"
 

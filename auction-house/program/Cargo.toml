@@ -21,7 +21,7 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-safecoin-program = "~1.8.12"
+safecoin-program = {path = "../../../Safecoin/sdk/program"}
 anchor-lang = {path = "../../../anchor/lang"}
 anchor-spl = {path = "../../../anchor/spl"}
 safe-token = { features = ["no-entrypoint"],path = "../../../safecoin-program-lib/libraries/safe-token/program" }

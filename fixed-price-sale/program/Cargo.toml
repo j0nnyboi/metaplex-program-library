@@ -25,6 +25,6 @@ mpl-token-metadata = { features = [ "no-entrypoint" ], path="../../token-metadat
 [dev-dependencies]
 anchor-client = {path = "../../../anchor/client"}
 safecoin-program-test = "~1.8.12"
-safecoin-program = "~1.8.12"
+safecoin-program = {path = "../../../Safecoin/sdk/program"}
 safecoin-sdk = "~1.8.12"
 safe-associated-token-account = {path = "../../../safecoin-program-library/associated-token-account/program"}

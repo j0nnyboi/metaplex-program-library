@@ -25,5 +25,5 @@ safe-token = { features = ["no-entrypoint"],path = "../../../safecoin-program-li
 mpl-token-metadata = { features = ["no-entrypoint"], path="../../token-metadata/program" }
 safe-associated-token-account = { features = ["no-entrypoint",] ,path = "../../../safecoin-program-lib/libraries/safe-associated-token-account/program"}
 anchor-spl = {path = "../../../anchor/spl"}
-safecoin-program = "~1.8.12"
+safecoin-program = {path = "../../../Safecoin/sdk/program"}
 safecoin-gateway = "~1.8.12"

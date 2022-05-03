@@ -31,7 +31,7 @@ use safecoin_program::{
     system_instruction,
     sysvar::{rent::Rent, Sysvar},
 };
-use spl_associated_token_account::get_associated_token_address;
+use safe_associated_token_account::get_associated_token_address;
 use safe_token::{
     instruction::{set_authority, AuthorityType},
     state::Account as SplAccount,
