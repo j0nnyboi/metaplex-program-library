@@ -17,10 +17,10 @@ test-bpf = []
 num-derive = "~0.3"
 arrayref = "~0.3.6"
 num-traits = "~0.2"
-safecoin-program = "~1.8.12"
-mpl-token-vault = { version = "~0.1.0", features = [ "no-entrypoint" ] }
-safe-token = { version="~3.2.2", features = [ "no-entrypoint" ] }
-safe-associated-token-account = { version = "~1.0.10", features = ["no-entrypoint"] }
+safecoin-program = {path = "../../../Safecoin/sdk/program"}
+mpl-token-vault = { path = "../../token-vault/program", features = [ "no-entrypoint" ] }
+safe-token = { path = "../../../safecoin-program-library/token/program", features = [ "no-entrypoint" ] }
+safe-associated-token-account = { path = "../../../safecoin-program-library/associated-token-account/program", features = ["no-entrypoint"] }
 thiserror = "~1.0"
 borsh = "~0.9.2"
 shank = { version = "~0.0.1" }
