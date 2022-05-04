@@ -5,9 +5,9 @@
  * See: https://github.com/metaplex-foundation/solita
  */
 
-import * as web3 from '@solana/web3.js';
-import * as beetSolana from '@metaplex-foundation/beet-solana';
-import * as beet from '@metaplex-foundation/beet';
+import * as web3 from '@safecoin/web3.js';
+import * as beetSolana from '@araviel/mtf-beet-safecoin';
+import * as beet from '@araviel/mtf-beet';
 export type Creator = {
   address: web3.PublicKey;
   verified: boolean;

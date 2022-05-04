@@ -6,7 +6,7 @@ const programDir = path.join(__dirname, '..', '..', 'program');
 const generatedIdlDir = path.join(__dirname, '..', 'idl');
 const generatedSDKDir = path.join(__dirname, '..', 'src', 'generated');
 const PROGRAM_NAME = 'mpl_token_metadata';
-const { Solita } = require('@metaplex-foundation/solita');
+const { Solita } = require('@araviel/mtf-solita');
 const { spawn } = require('child_process');
 
 const shank = spawn('shank', ['idl', '--out-dir', generatedIdlDir, '--crate-root', programDir])

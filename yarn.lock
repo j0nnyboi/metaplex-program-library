@@ -5,6 +5,66 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@araviel/mpl-token-metadata@workspace:token-metadata/js":
+  version: 0.0.0-use.local
+  resolution: "@araviel/mpl-token-metadata@workspace:token-metadata/js"
+  dependencies:
+    "@araviel/mtf-beet": ^0.1.0
+    "@araviel/mtf-beet-safecoin": ^0.1.1
+    "@araviel/mtf-solita": ^0.2.1
+    "@j0nnyboi/cusper": ^0.0.1
+    "@j0nnyboi/mpl-core": ^0.0.1
+    "@safecoin/safe-token": ^0.1.7-b
+    "@safecoin/web3.js": ^1.29.4
+    "@types/bn.js": ^5.1.0
+    "@types/debug": ^4.1.7
+    bn.js: ^5.2.0
+    debug: ^4.3.3
+    eslint: ^8.3.0
+    rimraf: ^3.0.2
+    supports-color: ^9.2.1
+    typescript: ^4.6.2
+  languageName: unknown
+  linkType: soft
+
+"@araviel/mtf-beet-safecoin@npm:^0.1.1, @araviel/mtf-beet-safecoin@npm:^0.1.12":
+  version: 0.1.12
+  resolution: "@araviel/mtf-beet-safecoin@npm:0.1.12"
+  dependencies:
+    "@araviel/mtf-beet": ">=0.1.0"
+    "@safecoin/web3.js": ^1.29.4
+  checksum: a142f6db00ff7a0a02f0f86a22b31a54c85e69e2eabcb0c767d75d1c1f83de7db39aee6f8074af4f13abe29cae77fe382a35d2965b031ce6df1ef14c88946826
+  languageName: node
+  linkType: hard
+
+"@araviel/mtf-beet@npm:>=0.1.0, @araviel/mtf-beet@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@araviel/mtf-beet@npm:0.1.0"
+  dependencies:
+    ansicolors: ^0.3.2
+    bn.js: ^5.2.0
+    debug: ^4.3.3
+  checksum: 1c6634dd1d94453cf992fb6ec94431b7c368f8a044d8f3de2a32e354a305cf0012a95ca3314411cca984e1145754092f7c6a6bfd2e7bb1cdbae8794fd533ae4b
+  languageName: node
+  linkType: hard
+
+"@araviel/mtf-solita@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@araviel/mtf-solita@npm:0.2.1"
+  dependencies:
+    "@araviel/mtf-beet": ^0.1.0
+    "@araviel/mtf-beet-safecoin": ^0.1.12
+    "@safecoin/web3.js": ^1.29.4
+    camelcase: ^6.2.1
+    debug: ^4.3.3
+    js-sha256: ^0.9.0
+    prettier: ^2.5.1
+    snake-case: ^3.0.4
+    spok: ^1.4.3
+  checksum: 8932860152ec7b4e4978efcd15a0785a2aa1c807e6d5961abf33c197615b11f41757abbd46cdabaa3569208f7723ffa41119a34a5d71dd376526578ec9eb1d03
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0":
   version: 7.16.7
   resolution: "@babel/code-frame@npm:7.16.7"
@@ -130,6 +190,23 @@ __metadata:
   version: 3.0.2
   resolution: "@hutson/parse-repository-url@npm:3.0.2"
   checksum: 39992c5f183c5ca3d761d6ed9dfabcb79b5f3750bf1b7f3532e1dc439ca370138bbd426ee250fdaba460bc948e6761fbefd484b8f4f36885d71ded96138340d1
+  languageName: node
+  linkType: hard
+
+"@j0nnyboi/cusper@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@j0nnyboi/cusper@npm:0.0.1"
+  checksum: 3bf8f43c0c65acb8ab1e5c13a021eafd08c2a629ca7ce4a9601ddb0e6acd710595142ceeaafdf81d40c9111e373937c662dc1d339597e5332c4efba176087850
+  languageName: node
+  linkType: hard
+
+"@j0nnyboi/mpl-core@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@j0nnyboi/mpl-core@npm:0.0.1"
+  dependencies:
+    "@safecoin/web3.js": ^1.29.3
+    bs58: ^4.0.1
+  checksum: 929c65ec2c7e6899e724d8263be314509629e24d44a898fdd911afefd88b4144b99dfde7cfbcf9359a180427791a24c5b07e133b4b3491006b6848daf6c37901
   languageName: node
   linkType: hard
 
@@ -1165,28 +1242,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metaplex-foundation/mpl-token-metadata@workspace:token-metadata/js":
-  version: 0.0.0-use.local
-  resolution: "@metaplex-foundation/mpl-token-metadata@workspace:token-metadata/js"
-  dependencies:
-    "@metaplex-foundation/beet": ^0.1.0
-    "@metaplex-foundation/beet-solana": ^0.1.1
-    "@metaplex-foundation/cusper": ^0.0.2
-    "@metaplex-foundation/mpl-core": ^0.0.5
-    "@metaplex-foundation/solita": ^0.2.0
-    "@solana/spl-token": ^0.2.0
-    "@solana/web3.js": ^1.35.1
-    "@types/bn.js": ^5.1.0
-    "@types/debug": ^4.1.7
-    bn.js: ^5.2.0
-    debug: ^4.3.3
-    eslint: ^8.3.0
-    rimraf: ^3.0.2
-    supports-color: ^9.2.1
-    typescript: ^4.6.2
-  languageName: unknown
-  linkType: soft
-
 "@metaplex-foundation/mpl-token-vault@^0.0.2, @metaplex-foundation/mpl-token-vault@workspace:token-vault/js":
   version: 0.0.0-use.local
   resolution: "@metaplex-foundation/mpl-token-vault@workspace:token-vault/js"
@@ -1507,6 +1562,42 @@ __metadata:
   peerDependencies:
     "@solana/web3.js": ^1.2.0
   checksum: 7bdc25e8d6cca13166869c8f09db2fabf103e8dc4861f09f277bb0080dfaaed9f50d4b5e2579bc2c975db263faaa92539d5ddb84a2f4d8cf09f3c6e6bddf79e1
+  languageName: node
+  linkType: hard
+
+"@safecoin/safe-token@npm:^0.1.7-b":
+  version: 0.1.7
+  resolution: "@safecoin/safe-token@npm:0.1.7"
+  dependencies:
+    "@babel/runtime": ^7.10.5
+    "@safecoin/web3.js": ^1.21.0
+    bn.js: ^5.1.0
+    buffer: 6.0.3
+    buffer-layout: ^1.2.0
+    dotenv: 10.0.0
+  checksum: 5dc495e038ef550a6ace39d0ea9ba623d403f0dc0c0a4681e787e5d269860ad29c3b0ad4a55dcaa2fc4005ab7156aaeb06cdb3311ef9fa30edcaa81537b8fb8d
+  languageName: node
+  linkType: hard
+
+"@safecoin/web3.js@npm:^1.21.0, @safecoin/web3.js@npm:^1.29.3, @safecoin/web3.js@npm:^1.29.4":
+  version: 1.29.4
+  resolution: "@safecoin/web3.js@npm:1.29.4"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    "@solana/buffer-layout": ^3.0.0
+    bn.js: ^5.0.0
+    borsh: ^0.4.0
+    bs58: ^4.0.1
+    buffer: 6.0.1
+    cross-fetch: ^3.1.4
+    crypto-hash: ^1.2.2
+    jayson: ^3.4.4
+    js-sha3: ^0.8.0
+    rpc-websockets: ^7.4.2
+    secp256k1: ^4.0.2
+    superstruct: ^0.14.2
+    tweetnacl: ^1.0.0
+  checksum: 842617f49ea2b04909e4d23c38ee2ff82fb1f4a1f1a7e50537e1ff9f9d960361399c9b4824646c937c71c06abfb52dc7bfbf655669e797d6982365c87dc3f282
   languageName: node
   linkType: hard
 
@@ -2910,7 +3001,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"crypto-hash@npm:^1.3.0":
+"crypto-hash@npm:^1.2.2, crypto-hash@npm:^1.3.0":
   version: 1.3.0
   resolution: "crypto-hash@npm:1.3.0"
   checksum: a3a507e0d2b18fbd2da8088a1c62d0c53c009a99bbfa6d851cac069734ffa546922fa51bdd776d006459701cdda873463e5059ece3431aca048fd99e7573d138
