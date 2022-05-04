@@ -6,7 +6,7 @@
  */
 
 import * as splToken from '@safecoin/safe-token';
-import * as beet from '@j0nnyboi/beet';
+import * as beet from '@araviel/mtf-beet';
 import * as web3 from '@safecoin/web3.js';
 import {
   MintNewEditionFromMasterEditionViaTokenArgs,

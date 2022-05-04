@@ -5,7 +5,7 @@
  * See: https://github.com/metaplex-foundation/solita
  */
 
-import * as beet from '@j0nnyboi/beet';
+import * as beet from '@araviel/mtf-beet';
 export type MintPrintingTokensViaTokenArgs = {
   supply: beet.bignum;
 };

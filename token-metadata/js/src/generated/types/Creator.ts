@@ -6,8 +6,8 @@
  */
 
 import * as web3 from '@safecoin/web3.js';
-import * as beetSolana from '@j0nnyboi/beet-safecoin';
-import * as beet from '@j0nnyboi/beet';
+import * as beetSolana from '@araviel/mtf-beet-safecoin';
+import * as beet from '@araviel/mtf-beet';
 export type Creator = {
   address: web3.PublicKey;
   verified: boolean;

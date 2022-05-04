@@ -1,5 +1,5 @@
 {
-  "name": "@metaplex-foundation/mpl-token-metadata",
+  "name": "@araviel/mpl-token-metadata",
   "version": "2.1.0",
   "contractVersion": "1.2.5",
   "description": "MPL Token Metadata JavaScript API.",
@@ -39,10 +39,10 @@
   "author": "Metaplex Maintainers <contact@metaplex.com>",
   "license": "MIT",
   "dependencies": {
-    "@j0nnyboi/beet": "^0.1.1",
-    "@j0nnyboi/beet-safecoin": "^0.1.1",
-    "@metaplex-foundation/cusper": "^0.0.2",
-    "@safecoin/safe-token": "^0.2.0",
+    "@araviel/mtf-beet": "^0.1.0",
+    "@araviel/mtf-beet-safecoin": "^0.1.1",
+    "@j0nnyboi/cusper": "^0.0.1",
+    "@safecoin/safe-token": "^0.1.7-b",
     "@safecoin/web3.js": "^1.29.4",
     "bn.js": "^5.2.0",
     "debug": "^4.3.3"

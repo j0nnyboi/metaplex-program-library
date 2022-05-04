@@ -5,9 +5,9 @@
  * See: https://github.com/metaplex-foundation/solita
  */
 
-import * as beet from '@j0nnyboi/beet';
+import * as beet from '@araviel/mtf-beet';
 import * as web3 from '@safecoin/web3.js';
-import * as beetSolana from '@j0nnyboi/beet-safecoin';
+import * as beetSolana from '@araviel/mtf-beet-safecoin';
 import { Data, dataBeet } from './Data';
 export type UpdateMetadataAccountArgs = {
   data: beet.COption<Data>;

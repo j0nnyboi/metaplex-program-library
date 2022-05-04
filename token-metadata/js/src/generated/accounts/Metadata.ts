@@ -6,8 +6,8 @@
  */
 
 import * as web3 from '@safecoin/web3.js';
-import * as beet from '@j0nnyboi/beet';
-import * as beetSolana from '@j0nnyboi/beet-safecoin';
+import * as beet from '@araviel/mtf-beet';
+import * as beetSolana from '@araviel/mtf-beet-safecoin';
 import { Key, keyBeet } from '../types/Key';
 import { Data, dataBeet } from '../types/Data';
 import { TokenStandard, tokenStandardBeet } from '../types/TokenStandard';
