@@ -43,7 +43,7 @@
     "@safecoin/web3.js": "^1.29.4"
   },
   "devDependencies": {
-    "@metaplex-foundation/solita": "^0.2.0",
+    "@ledamintio/solita": "^0.2.0",
     "@types/tape": "^4.13.2",
     "eslint": "^8.3.0",
     "rimraf": "^3.0.2",
